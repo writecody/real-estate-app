@@ -1,0 +1,16 @@
+button {
+    background-color: springgreen;
+}
+
+p {
+    display: inline-block;
+    width: 200px;
+}
+
+#address-info {
+    background-color: silver;
+}
+
+#home-specs {
+    background-color: lightcyan;
+}
