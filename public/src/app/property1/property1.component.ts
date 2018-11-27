@@ -17,6 +17,4 @@ export class Property1Component implements OnInit {
   ngOnInit() {
   }
 
-
-
 }
