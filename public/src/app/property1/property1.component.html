@@ -1,3 +1,108 @@
-<p>
-  property1 works!
-</p>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <h2>Zillow Property Search: Property 1</h2>
+    
+    <form id="property-search">
+       
+        Address: <input type="text" name="formAddress" [(ngModel)]="formAddress">
+       
+        City, State: <input type="text" name="formCityStateZip" [(ngModel)]="formCityStateZip"> 
+
+        <button (click)="search()">Search</button>
+
+    </form>
+    
+    <div id="property-info">
+        
+        <div id="address-info">
+            
+            <h4>Address:</h4>
+            
+            <p id="address"></p>
+            
+            <p id="citystatezip"></p>
+            
+            <p id="zipcode"></p>
+            
+        </div><!--close div "address-info"-->
+        
+        <div id="home-specs">
+            
+            <div>Bedrooms:
+                <p id="bedrooms"></p>
+            </div>
+            
+            <div>Bathrooms:
+                <p id="bathrooms"></p>
+            </div>
+            
+            <div>Finished Square Feet:
+                <p id="finishedSqFt"></p>
+            </div>
+
+            <div>Lot Size (Square Feet):
+                <p id="lotSizeSqFt"></p>
+            </div>
+            
+            <div>Year Built:
+                <p id="yearBuilt"></p>
+            </div>
+            
+            <div>Price Estimate:
+                <h5 id="amount"></h5>
+            </div>
+            
+        </div><!--close div "home-specs"-->
+        
+        <div id="mortgage-div">
+            
+            <h4>Mortgage:</h4>
+
+            <div>Down Payment:
+                <p id="down-payment"></p>
+            </div>
+
+            <div>Insurance (M):
+                <p id="insurance-M"></p>
+            </div>
+
+            <div>Maintenance (M):
+                <p id="maintenance-M"></p>
+            </div>
+
+            <div>Utilities:
+                <p id="utilities"></p>
+            </div>
+
+            <div>Advertising:
+                <p id="advertising"></p>
+            </div>
+
+            <div>Admin (Y):
+                <p id="admin-Y"></p>
+            </div>
+
+            <div>Property Management:
+                <p id="property-mgmt"></p>
+            </div>
+
+            <div>Variable Cost Property Management:
+                <p id="property-mgmt-pct"></p>
+            </div>
+
+        </div><!--close "mortgage-div"-->
+        
+        <div id="cost-assumptions">
+
+
+
+        </div>
+
+    </div><!--close div "property-info"-->
+    
+  
+</body>
+</html>
