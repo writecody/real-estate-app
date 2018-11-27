@@ -6,16 +6,19 @@ import { Property3Component } from './property3/property3.component';
 import { SearchComponent } from './search/search.component';
 import { MainComponent } from './main/main.component';
 import { AppComponent } from './app.component';
+import { CompareComponent } from './compare/compare.component';
 
 
 const routes: Routes = [
-  { path: '', component: MainComponent, children: [
+  { path: 'main', component: MainComponent, children: [
     { path: 'property1', component: Property1Component },
     { path: 'property2', component: Property2Component },
     { path: 'property3', component: Property3Component },
+    { path: 'compare', component: CompareComponent },
     { path: 'search', component: SearchComponent }]
   },
-  {path: '**', redirectTo: '' }
+  { path: '', pathMatch: 'full', redirectTo: '/main' },
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({
