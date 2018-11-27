@@ -34,6 +34,7 @@ yarn-error.log
 testem.log
 /typings
 /src/app/app.component.ts
+/src/app/main/main.component.ts
 
 # System Files
 .DS_Store
