@@ -7,6 +7,10 @@ import { MainComponent } from '../main/main.component';
   styleUrls: ['./property1.component.css']
 })
 export class Property1Component implements OnInit {
+
+  formAddress1: String = '';
+  formCityStateZip1: String = '';
+
   @Input() MainComponent: MainComponent;
 
   constructor(
@@ -14,5 +18,7 @@ export class Property1Component implements OnInit {
 
   ngOnInit() {
   }
+
+
 
 }
