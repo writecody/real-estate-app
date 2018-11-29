@@ -5,5 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class CallerService {
 
-  constructor() { }
+  printToConsole(arg) {
+    console.log(arg);
+  }
+ 
 }

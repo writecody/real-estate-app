@@ -10,6 +10,7 @@ import { Property3Component } from './property3/property3.component';
 import { SearchComponent } from './search/search.component';
 import { CompareComponent } from './compare/compare.component';
 import { MainComponent } from './main/main.component';
+import { CallerService } from './caller.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,9 @@ import { MainComponent } from './main/main.component';
     HttpClientModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [
+    CallerService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
