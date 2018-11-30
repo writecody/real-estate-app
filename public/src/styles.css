@@ -4,3 +4,7 @@ th, td {
     text-align: center;
     padding: 8px;
 }
+
+button {
+    background-color: lightblue;
+}
