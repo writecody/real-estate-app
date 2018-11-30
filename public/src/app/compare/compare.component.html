@@ -1,3 +1,12 @@
-<p>
-  compare works!
-</p>
+<h2>Expense Assumptions</h2>
+
+<div id="userInputs">
+  <p>Tax Rate: <input type="text" name="taxRate1" [(ngModel)]="taxRate1"></p>
+  <p>Rent: <input type="text" name="rent1" [(ngModel)]="rent1"></p>
+</div>
+
+<div id="calculations">
+  <p>Tax Rate: {{ taxRate1 }}</p>
+  <p>Adjusted Tax Rate Value Example (-25): {{ (taxRate1 - 25) }}</p>
+  <p>Rent 1 Amount: ${{ rent1 }}</p>
+</div>

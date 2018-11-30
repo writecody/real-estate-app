@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
+import { MainComponent } from '../main/main.component';
 
 @Component({
   selector: 'app-compare',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompareComponent implements OnInit {
 
-  constructor() { }
+  @Input() MainComponent: MainComponent;
 
-  ngOnInit() {
-  }
+    rent1: number = this.rent1;
+    rent2: number = this.rent2;
+    rent3: number = this.rent3;
+    
+    constructor() { }
+    
+    ngOnInit() {
+    }
+    
+    
+    calculateCompare() {
+    }
 
 }
