@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+th, td {
+    border: .2px solid #ddd;
+    text-align: center;
+    padding: 8px;
+}
