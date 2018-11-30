@@ -10,14 +10,15 @@ import { CompareComponent } from './compare/compare.component';
 
 
 const routes: Routes = [
-  { path: 'main', component: MainComponent, children: [
-    { path: 'property1', component: Property1Component },
-    { path: 'property2', component: Property2Component },
-    { path: 'property3', component: Property3Component },
-    { path: 'compare', component: CompareComponent },
-    { path: 'search', component: SearchComponent }]
-  },
-  { path: '', pathMatch: 'full', redirectTo: '/main' },
+  // { path: 'main', component: MainComponent, children: [
+    { path: 'compare', component: Property1Component },
+    // { path: 'property2', component: Property2Component },
+    // { path: 'property3', component: Property3Component },
+    // { path: 'compare', component: CompareComponent },
+    // { path: 'search', component: SearchComponent }
+  // ]
+  // },
+  { path: '', pathMatch: 'full', redirectTo: '/compare' },
   { path: '**', redirectTo: '' },
 ];
 
