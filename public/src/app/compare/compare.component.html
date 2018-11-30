@@ -1,12 +1,83 @@
-<h2>Expense Assumptions</h2>
+<h2>Summary:</h2>
 
-<div id="userInputs">
-  <p>Tax Rate: <input type="text" name="taxRate1" [(ngModel)]="taxRate1"></p>
-  <p>Rent: <input type="text" name="rent1" [(ngModel)]="rent1"></p>
-</div>
-
-<div id="calculations">
-  <p>Tax Rate: {{ taxRate1 }}</p>
-  <p>Adjusted Tax Rate Value Example (-25): {{ (taxRate1 - 25) }}</p>
-  <p>Rent 1 Amount: ${{ rent1 }}</p>
+<div id="summary">
+  <table>
+    <tr id="table-headers">
+      <th>Property</th>
+      <th>Address</th>
+      <th>Listed Price</th>
+      <th>Hypothetical Price</th>
+      <th>Improvements</th>
+      <th>Cash Outlay</th>
+      <th>Rent</th>
+      <th>R/PP</th>
+      <th>R/HP</th>
+      <th>Beds</th>
+      <th>Baths</th>
+      <th>Sq Ft</th>
+      <th>Location Rt.</th>
+      <th>Cash ROI</th>
+      <th>Total ROI</th>
+      <th>Notes</th>
+    </tr>
+    
+    <tr>
+      <td>1</td>
+      <td></td>
+      <td></td>
+      <td>$<input type="text" name="hypotheticalPrice1" [(ngModel)]="hypotheticalPrice1"></td>
+      <td></td>
+      <td></td>
+      <td>$<input type="text" name="rent1" [(ngModel)]="rent1"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>2</td>
+      <td></td>
+      <td></td>
+      <td>$<input type="text" name="hypotheticalPrice2" [(ngModel)]="hypotheticalPrice2"></td>
+      <td></td>
+      <td></td>
+      <td>$<input type="text" name="rent2" [(ngModel)]="rent2"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td>3</td>
+      <td></td>
+      <td></td>
+      <td>$<input type="text" name="hypotheticalPrice3" [(ngModel)]="hypotheticalPrice3"></td>
+      <td></td>
+      <td></td>
+      <td>$<input type="text" name="rent3" [(ngModel)]="rent3"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+  </table>
+  
 </div>
