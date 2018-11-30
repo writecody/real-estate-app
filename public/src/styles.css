@@ -6,5 +6,10 @@ th, td {
 }
 
 button {
-    background-color: lightblue;
+    background-color: springgreen;
+}
+
+#property1 {
+    background-color: lightgrey;
+    display: inline-block;
 }

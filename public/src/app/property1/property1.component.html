@@ -4,114 +4,191 @@
 </head>
 <body>
     
-    <h2>Zillow Property Search: Property 1</h2>
+    <h2>Zillow Property Search: Compare Properties</h2>
     
     <form id="property-search">
-        
+        <h4>Property 1 Search</h4>
         Address: <input type="text" name="formAddress1" [(ngModel)]="formAddress1">
-        
         City, State: <input type="text" name="formCityStateZip1" [(ngModel)]="formCityStateZip1"> 
-        
         <button (click)="search1()">Search</button>
-        
     </form>
     
-    <div id="cost-assumptions">
-        <table>
-            <tr>
-                <th>Purchase Price</th>
-                <th>Land Value (25%)</th>
-                <th>Building Value</th>
-                <th>Improvements</th>
-                <th>Closing Costs</th>
-                <th>Total Cost</th>
-            </tr>
-            <tr>
-                <td>$<input type="number" name="purchasePrice1" [(ngModel)]="purchasePrice1"></td>
-                <td>$ {{ (purchasePrice1 * .25) }} </td>
-                <td>$ {{ (purchasePrice1 * .75) }} </td>
-                <td>$<input type="number" name="improvements1" [(ngModel)]="improvements1"></td>
-                <td>$<input type="number" name="closingCosts1" [(ngModel)]="closingCosts1"></td>
-                <td>$ {{ totalCost1 }} </td>
-            </tr>
-        </table>
-        <button (click)="findTotalCost1()">Calculate</button> 
-    </div><!--close div "cost-assumptions"-->
-    
-    <div id="revenue-assumptions">
-        <table>
-            <tr>
-                <th>Monthly Rent</th>
-                <th>Vacancy Rate</th>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-            </tr>
-        </table>
-    </div> <!--close div "revenue-assumptions"-->
-    
-    
-    <div id="property-info1">
+    <div id="property1">
         
-        <div id="address-info1">
-            
+        <h3>Property 1</h3>
+        
+        <div id="address-notes">
             <h4>Address:</h4>
-            
             <p id="address1"></p>
-            
             <p id="citystatezip1"></p>
-            
             <p id="zipcode1"></p>
             
-        </div><!--close div "address-info"-->
+            <h4 id="notes">Notes: </h4>
+            <p></p>
+        </div><!--close div "address-notes"-->
         
-        <div id="home-specs1">
-            
-            <div>Bedrooms:
-                <p id="bedrooms1"></p>
-            </div>
-            
-            <div>Bathrooms:
-                <p id="bathrooms1"></p>
-            </div>
-            
-            <div>Finished Square Feet:
-                <p id="finishedSqFt1"></p>
-            </div>
-            
-            <div>Lot Size (Square Feet):
-                <p id="lotSizeSqFt1"></p>
-            </div>
-            
-            <div>Year Built:
-                <p id="yearBuilt1"></p>
-            </div>
-            
-            <div>Price Estimate:
-                <h5 id="amount1"></h5>
-            </div>
-            
-        </div><!--close div "home-specs"-->
+        <div id="cost-assumptions">
+            <h4>Cost Assumptions</h4>
+            <table>
+                <tr>
+                    <th>Purchase Price</th>
+                    <th>Land Value (25%)</th>
+                    <th>Building Value</th>
+                    <th>Improvements</th>
+                    <th>Closing Costs</th>
+                    <th>Total Cost</th>
+                </tr>
+                <tr>
+                    <td>$<input type="number" name="purchasePrice1" [(ngModel)]="purchasePrice1"></td>
+                    <td>$ {{ (purchasePrice1 * .25) }} </td>
+                    <td>$ {{ (purchasePrice1 * .75) }} </td>
+                    <td>$<input type="number" name="improvements1" [(ngModel)]="improvements1"></td>
+                    <td>$<input type="number" name="closingCosts1" [(ngModel)]="closingCosts1"></td>
+                    <td>$ {{ totalCost1 }} </td>
+                </tr>
+            </table>
+            <button (click)="findTotalCost1()">Calculate</button> 
+        </div><!--close div "cost-assumptions"-->
+        
+        <div id="revenue-assumptions">
+            <h4>Revenue Assumptions</h4>
+            <table>
+                <tr>
+                    <th>Monthly Rent</th>
+                    <th>Vacancy Rate</th>
+                </tr>
+                <tr>
+                    <td>$<input type="number" name="monthlyRent1" [(ngModel)]="monthlyRent1"></td>
+                    <td>$<input type="number" name="vacancyRate1" [(ngModel)]="vacancyRate1"></td>
+                </tr>
+            </table>
+        </div><!--close div "revenue-assumptions"-->
+        
+        <div id="quick-stats">
+            <h4>Quick Stats</h4>
+            <table>
+                <tr>
+                    <th>Year Built</th>
+                    <th>Listed Price</th>
+                    <th>Beds</th>
+                    <th>Baths</th>
+                    <th>Square Footage</th>
+                    <th>Lot Size (Sq. Ft.)</th>
+                </tr>
+                <tr>
+                    <td id="yearBuilt1"></td>
+                    <td id="amount1"></td>
+                    <td id="bedrooms1"></td>
+                    <td id="bathrooms1"></td>
+                    <td id="finishedSqFt1"></td>
+                    <td id="lotSizeSqFt1"></td>
+                </tr>
+            </table>
+        </div><!--close div "quick-stats"-->
+        
+        <div id="financing-assumptions">
+            <h4>Financing Assumptions</h4>
+            <table>
+                <tr>
+                    <th>Down Payment (%)</th>
+                    <th>Finance Amt</th>
+                    <th>Down Payment Amt</th>
+                    <th>Interest Rate</th>
+                    <th>Mortgage (Year)</th>
+                    <th>Mortgage Payment</th>
+                    <th>Cash Outlay</th>
+                </tr>
+                <tr>
+                    <td><input type="percent" name="downPaymentPct1" [(ngModel)]="downPaymentPct1"></td>      
+                    <td>$ </td>
+                    <td>$ </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div><!--close div "financing-assumptions"-->
+        
+        <div id="expense-assumptions">
+            <h4>Expense Assumptions</h4>
+            <table>
+                <tr>
+                    <th>Tax Rate</th>
+                    <th>Insurance (Month)</th>
+                    <th>Maintenance & Repairs (Month)</th>
+                    <th>Utilities (Month)</th>
+                    <th>Advertising (Year)</th>
+                    <th>Admin (Year)</th>
+                    <th>Property Management %</th>
+                    <th>Property Management $</th>
+                </tr>
+                <tr>
+                    <td><input type="number" name="taxRate1" [(ngModel)]="taxRate1"></td>
+                    <td>$<input type="number" name="insuranceM1" [(ngModel)]="insuranceM1"></td>
+                    <td>$<input type="number" name="maintenanceM1" [(ngModel)]="maintenanceM1"></td>
+                    <td>$<input type="number" name="utilitiesM1" [(ngModel)]="utilitiesM1"></td>
+                    <td>$<input type="number" name="advertisingY1" [(ngModel)]="advertisingY1"></td>                    
+                    <td>$<input type="number" name="adminY1" [(ngModel)]="adminY1"></td>     
+                    <td>$<input type="number" name="propertyMgmtPct1" [(ngModel)]="propertyMgmtPct1"></td>                      
+                    <td>$<input type="number" name="propertyMgmtAmt" [(ngModel)]="propertyMgmtAmt"></td> 
+                </tr>
+            </table>
+        </div><!--close div "expense-assumptions"-->
+        
+        <div id="run-ourselves">
+            <h4>Run Ourselves</h4>
+            <table>
+                <tr>
+                    <th>Annual Cash Flow</th>
+                    <th>Cash ROI</th>
+                    <th>Total ROI</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div><!--close div "run-ourselves"-->
+        
+        <div id="manager-hired">
+            <h4>Manager Hired</h4>
+            <table>
+                <tr>
+                    <th>Annual Cash Flow</th>
+                    <th>Cash ROI</th>
+                    <th>Total ROI</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div><!--close div "manager-hired"-->
+        
+        
+        
         
         <div id="mortgage-div1">
             
             <h4>Mortgage:</h4>
             
             <div>Down Payment:
-                <p id="down-payment1"></p>
+                <p></p>
             </div>
             
             <div>Insurance (M):
-                <p id="insurance-M1"></p>
+                <p></p>
             </div>
             
             <div>Maintenance (M):
-                <p id="maintenance-M1"></p>
+                <p></p>
             </div>
             
             <div>Utilities:
-                <p id="utilities1"></p>
+                <p></p>
             </div>
             
             <div>Advertising:
@@ -132,7 +209,7 @@
             
         </div><!--close "mortgage-div"-->
         
-    </div><!--close div "property-info"-->
+    </div><!--close div "property1"-->
     
     
 </body>
