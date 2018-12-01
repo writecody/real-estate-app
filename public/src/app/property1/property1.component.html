@@ -1,6 +1,11 @@
 <html>
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        formatNumber(num) {
+            return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
+        };    
+    </script>
 </head>
 <body>
     
@@ -40,8 +45,8 @@
                 </tr>
                 <tr>
                     <td>$<input type="number" name="purchasePrice1" [(ngModel)]="purchasePrice1"></td>
-                    <td>$ {{ (purchasePrice1 * .25) }} </td>
-                    <td>$ {{ (purchasePrice1 * .75) }} </td>
+                    <td>$ {{ formatNumber(purchasePrice1 * .25) }} </td>
+                    <td>$ {{ formatNumber(purchasePrice1 * .75) }} </td>
                     <td>$<input type="number" name="improvements1" [(ngModel)]="improvements1"></td>
                     <td>$<input type="number" name="closingCosts1" [(ngModel)]="closingCosts1"></td>
                     <td>$ {{ totalCost1 }} </td>
@@ -105,7 +110,7 @@
                     <td><input type="number" name="interestRate1" [(ngModel)]="interestRate1"></td>
                     <td><input type="number" name="mortgage1" [(ngModel)]="mortgage1"></td>
                     <td>$ {{ result1 }} </td>
-                    <td></td>
+                    <td>$ {{ ((purchasePrice1 * downPaymentPct1) / 100) + improvements1 + closingCosts1 }} </td>
                 </tr>
             </table>
             <button (click)="findMortgagePayment1()">Calculate Mortgage Payment</button> 
@@ -211,6 +216,7 @@
         </div><!--close "mortgage-div"-->
         
     </div><!--close div "property1"-->
+    
     
     
 </body>
