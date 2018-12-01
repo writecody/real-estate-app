@@ -47,7 +47,7 @@
                     <td>$ {{ totalCost1 }} </td>
                 </tr>
             </table>
-            <button (click)="findTotalCost1()">Calculate</button> 
+            <button (click)="findTotalCost1()">Calculate Total Cost</button> 
         </div><!--close div "cost-assumptions"-->
         
         <div id="revenue-assumptions">
@@ -94,20 +94,21 @@
                     <th>Finance Amt</th>
                     <th>Down Payment Amt</th>
                     <th>Interest Rate</th>
-                    <th>Mortgage (Year)</th>
+                    <th>Mortgage (Years)</th>
                     <th>Mortgage Payment</th>
                     <th>Cash Outlay</th>
                 </tr>
                 <tr>
-                    <td><input type="percent" name="downPaymentPct1" [(ngModel)]="downPaymentPct1"></td>      
-                    <td>$ </td>
+                    <td><input type="number" name="downPaymentPct1" [(ngModel)]="downPaymentPct1"></td>     
+                    <td>$ {{ purchasePrice1 - ((purchasePrice1 * downPaymentPct1) / 100) }}  </td>
                     <td>$ {{ (purchasePrice1 * downPaymentPct1) / 100 }} </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td><input type="number" name="interestRate1" [(ngModel)]="interestRate1"></td>
+                    <td><input type="number" name="mortgage1" [(ngModel)]="mortgage1"></td>
+                    <td>$ {{ result1 }} </td>
                     <td></td>
                 </tr>
             </table>
+            <button (click)="findMortgagePayment1()">Calculate Mortgage Payment</button> 
         </div><!--close div "financing-assumptions"-->
         
         <div id="expense-assumptions">
