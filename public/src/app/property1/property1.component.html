@@ -108,7 +108,7 @@
                     <td>$ {{ formatNumber(purchasePrice1 - ((purchasePrice1 * downPaymentPct1) / 100)) }}  </td>
                     <td>$ {{ formatNumber((purchasePrice1 * downPaymentPct1) / 100) }} </td>
                     <td><input type="number" name="interestRate1" [(ngModel)]="interestRate1"></td>
-                    <td><input type="number" name="mortgage1" [(ngModel)]="mortgage1"></td>
+                    <td><input type="number" name="mortgageTerm1" [(ngModel)]="mortgageTerm1"></td>
                     <td>$ {{ formatNumber(result1) }} </td>
                     <td>$ {{ formatNumber(((purchasePrice1 * downPaymentPct1) / 100) + improvements1 + closingCosts1) }} </td>
                 </tr>
