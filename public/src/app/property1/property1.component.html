@@ -101,7 +101,7 @@
                 <tr>
                     <td><input type="percent" name="downPaymentPct1" [(ngModel)]="downPaymentPct1"></td>      
                     <td>$ </td>
-                    <td>$ </td>
+                    <td>$ {{ (purchasePrice1 * downPaymentPct1) / 100 }} </td>
                     <td></td>
                     <td></td>
                     <td></td>
