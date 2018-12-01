@@ -29,7 +29,7 @@
             <p id="zipcode1"></p>
             
             <h4 id="notes">Notes: </h4>
-            <p></p>
+            <p><input type="textarea" name="notes1" [(ngModel)]="notes1"></p>
         </div><!--close div "address-notes"-->
         
         <div id="cost-assumptions">
@@ -105,12 +105,12 @@
                 </tr>
                 <tr>
                     <td><input type="number" name="downPaymentPct1" [(ngModel)]="downPaymentPct1"></td>     
-                    <td>$ {{ purchasePrice1 - ((purchasePrice1 * downPaymentPct1) / 100) }}  </td>
-                    <td>$ {{ (purchasePrice1 * downPaymentPct1) / 100 }} </td>
+                    <td>$ {{ formatNumber(purchasePrice1 - ((purchasePrice1 * downPaymentPct1) / 100)) }}  </td>
+                    <td>$ {{ formatNumber((purchasePrice1 * downPaymentPct1) / 100) }} </td>
                     <td><input type="number" name="interestRate1" [(ngModel)]="interestRate1"></td>
                     <td><input type="number" name="mortgage1" [(ngModel)]="mortgage1"></td>
-                    <td>$ {{ result1 }} </td>
-                    <td>$ {{ ((purchasePrice1 * downPaymentPct1) / 100) + improvements1 + closingCosts1 }} </td>
+                    <td>$ {{ formatNumber(result1) }} </td>
+                    <td>$ {{ formatNumber(((purchasePrice1 * downPaymentPct1) / 100) + improvements1 + closingCosts1) }} </td>
                 </tr>
             </table>
             <button (click)="findMortgagePayment1()">Calculate Mortgage Payment</button> 
@@ -143,7 +143,7 @@
         </div><!--close div "expense-assumptions"-->
         
         <div id="run-ourselves">
-            <h4>Run Ourselves</h4>
+            <h4>CF & ROI (Doing My Own PM)</h4>
             <table>
                 <tr>
                     <th>Annual Cash Flow</th>
@@ -159,7 +159,7 @@
         </div><!--close div "run-ourselves"-->
         
         <div id="manager-hired">
-            <h4>Manager Hired</h4>
+            <h4>CF & ROI (Outsourced PM)</h4>
             <table>
                 <tr>
                     <th>Annual Cash Flow</th>
