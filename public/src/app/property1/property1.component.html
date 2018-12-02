@@ -126,7 +126,7 @@
                     <th>Advertising (Year)</th>
                     <th>Admin (Year)</th>
                     <th>Property Management %</th>
-                    <th>Property Management $</th>
+                    <th>Property Management (Month) $</th>
                 </tr>
                 <tr>
                     <td><input type="number" name="taxRate1" [(ngModel)]="taxRate1"></td>
@@ -136,7 +136,7 @@
                     <td>$<input type="number" name="advertisingY1" [(ngModel)]="advertisingY1"></td>
                     <td>$<input type="number" name="adminY1" [(ngModel)]="adminY1"></td>     
                     <td><input type="number" name="propertyMgmtPct1" [(ngModel)]="propertyMgmtPct1"></td>
-                    <td>$<input type="number" name="propertyMgmtAmt1" [(ngModel)]="propertyMgmtAmt1"></td> 
+                    <td>$<input type="number" name="fixedCostPropertyMgmtM1" [(ngModel)]="fixedCostPropertyMgmtM1"></td> 
                 </tr>
             </table>
         </div><!--close div "expense-assumptions"-->
@@ -148,17 +148,20 @@
                     <th>Annual Cash Flow</th>
                     <th>Cash ROI</th>
                     <th>Total ROI</th>
+                    <th>Fixed Cost Property Management (Year)</th>
                 </tr>
                 <tr>
                     <td>$ {{ formatNumber(cashFlowY1) }} </td>
                     <td> {{ formatNumber(cashRoi1) }} % </td>
-                    <td></td>
+                    <td>TOTAL ROI</td>
+                    <td>$ {{ formatNumber(fixedCostPropertyMgmtY1) }} </td>
                 </tr>
             </table>
         </div><!--close div "manager-hired"-->
-
-        <p>variableCostPropertyMgmt1 test: {{ formatNumber(variableCostPropertyMgmt1) }}</p>
-
+        
+        <div id="run-ourselves">
+        </div>
+        <p>test totalExpenses1 {{ formatNumber(totalExpenses1) }} </p>
         <button (click)="calculate1()">Calculate</button> 
         
     </div><!--close div "property1"-->
