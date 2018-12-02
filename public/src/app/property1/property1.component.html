@@ -52,7 +52,6 @@
                     <td>$ {{ totalCost1 }} </td>
                 </tr>
             </table>
-            <button (click)="findTotalCost1()">Calculate Total Cost</button> 
         </div><!--close div "cost-assumptions"-->
         
         <div id="revenue-assumptions">
@@ -63,8 +62,8 @@
                     <th>Vacancy Rate</th>
                 </tr>
                 <tr>
-                    <td>$<input type="number" name="monthlyRent1" [(ngModel)]="monthlyRent1"></td>
-                    <td>$<input type="number" name="vacancyRate1" [(ngModel)]="vacancyRate1"></td>
+                    <td>$<input type="number" name="rentM1" [(ngModel)]="rentM1"></td>
+                    <td>%<input type="number" name="vacancyRate1" [(ngModel)]="vacancyRate1"></td>
                 </tr>
             </table>
         </div><!--close div "revenue-assumptions"-->
@@ -113,7 +112,7 @@
                     <td>$ {{ formatNumber(((purchasePrice1 * downPaymentPct1) / 100) + improvements1 + closingCosts1) }} </td>
                 </tr>
             </table>
-            <button (click)="findMortgagePayment1()">Calculate Mortgage Payment</button> 
+
         </div><!--close div "financing-assumptions"-->
         
         <div id="expense-assumptions">
@@ -134,9 +133,7 @@
                     <td>$<input type="number" name="insuranceM1" [(ngModel)]="insuranceM1"></td>
                     <td>$<input type="number" name="maintenanceM1" [(ngModel)]="maintenanceM1"></td>
                     <td>$<input type="number" name="utilitiesM1" [(ngModel)]="utilitiesM1"></td>
-                    <td>$<input type="number" name="advertisingY1" [(ngModel)]="advertisingY1"></td>                    
                     <td>$<input type="number" name="adminY1" [(ngModel)]="adminY1"></td>     
-                    <td>$<input type="number" name="propertyMgmtPct1" [(ngModel)]="propertyMgmtPct1"></td>                      
                     <td>$<input type="number" name="propertyMgmtAmt" [(ngModel)]="propertyMgmtAmt"></td> 
                 </tr>
             </table>
@@ -168,12 +165,13 @@
                 </tr>
                 <tr>
                     <td>$ {{ annualCashFlow1 }} </td>
-                    <td></td>
+                    <td> {{ cashRoi1 }} % </td>
                     <td></td>
                 </tr>
             </table>
         </div><!--close div "manager-hired"-->
         
+        <button (click)="calculate1()">Calculate</button> 
         
         
         
