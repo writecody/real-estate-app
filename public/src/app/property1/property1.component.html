@@ -151,7 +151,7 @@
                     <th>Fixed Cost Property Management (Year)</th>
                 </tr>
                 <tr>
-                    <td>$ ANNUAL CASH FLOW</td>
+                    <td>$ {{ formatNumber(cashFlowY1) }} </td>
                     <td> CASH ROI % </td>
                     <td>TOTAL ROI</td>
                     <td>$ {{ formatNumber(fixedCostPropertyMgmtY1) }} </td>
@@ -161,7 +161,9 @@
         
         <div id="run-ourselves">
         </div>
-        <p>test noi1 {{ (noi1) }} </p>
+
+        <p>test cashFlowY1 {{ (cashFlowY1) }} </p>
+        
         <button (click)="calculate1()">Calculate</button> 
         
     </div><!--close div "property1"-->
