@@ -3,7 +3,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
         formatNumber(num) {
-            return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
+            return num.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
         };    
     </script>
 </head>
@@ -45,8 +45,8 @@
                 </tr>
                 <tr>
                     <td>$<input type="number" name="purchasePrice1" [(ngModel)]="purchasePrice1"></td>
-                    <td>$ {{ formatNumber(purchasePrice1 * .25) }} </td>
-                    <td>$ {{ formatNumber(purchasePrice1 * .75) }} </td>
+                    <td>$ {{ formatNumber(landValue1) }} </td>
+                    <td>$ {{ formatNumber(buildingValue1) }} </td>
                     <td>$<input type="number" name="improvements1" [(ngModel)]="improvements1"></td>
                     <td>$<input type="number" name="closingCosts1" [(ngModel)]="closingCosts1"></td>
                     <td>$ {{ totalCost1 }} </td>
@@ -104,12 +104,12 @@
                 </tr>
                 <tr>
                     <td><input type="number" name="downPaymentPct1" [(ngModel)]="downPaymentPct1"></td>     
-                    <td>$ {{  }}   </td>
-                    <td>$ {{ formatNumber((purchasePrice1 * downPaymentPct1) / 100) }} </td>
+                    <td>$ {{ formatNumber(financeAmt1) }} </td>
+                    <td>$ {{ formatNumber(downPaymentAmt1) }} </td>
                     <td><input type="number" name="interestRate1" [(ngModel)]="interestRate1"></td>
                     <td><input type="number" name="mortgageTerm1" [(ngModel)]="mortgageTerm1"></td>
                     <td>$ {{ formatNumber(result1) }} </td>
-                    <td>$ {{ formatNumber(((purchasePrice1 * downPaymentPct1) / 100) + improvements1 + closingCosts1) }} </td>
+                    <td>$ {{ formatNumber(cashOutlay1) }} </td>
                 </tr>
             </table>
             
@@ -133,27 +133,13 @@
                     <td>$<input type="number" name="insuranceM1" [(ngModel)]="insuranceM1"></td>
                     <td>$<input type="number" name="maintenanceM1" [(ngModel)]="maintenanceM1"></td>
                     <td>$<input type="number" name="utilitiesM1" [(ngModel)]="utilitiesM1"></td>
+                    <td>$<input type="number" name="advertisingY1" [(ngModel)]="advertisingY1"></td>
                     <td>$<input type="number" name="adminY1" [(ngModel)]="adminY1"></td>     
-                    <td>$<input type="number" name="propertyMgmtAmt" [(ngModel)]="propertyMgmtAmt"></td> 
+                    <td><input type="number" name="propertyMgmtPct1" [(ngModel)]="propertyMgmtPct1"></td>
+                    <td>$<input type="number" name="propertyMgmtAmt1" [(ngModel)]="propertyMgmtAmt1"></td> 
                 </tr>
             </table>
         </div><!--close div "expense-assumptions"-->
-        
-        <div id="run-ourselves">
-            <h4>CF & ROI (Doing My Own PM)</h4>
-            <table>
-                <tr>
-                    <th>Annual Cash Flow</th>
-                    <th>Cash ROI</th>
-                    <th>Total ROI</th>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </table>
-        </div><!--close div "run-ourselves"-->
         
         <div id="manager-hired">
             <h4>CF & ROI (Outsourced PM)</h4>
@@ -164,13 +150,13 @@
                     <th>Total ROI</th>
                 </tr>
                 <tr>
-                    <td>$ {{ annualCashFlow1 }} </td>
-                    <td> {{ cashRoi1 }} % </td>
+                    <td>$ {{ formatNumber(annualCashFlow1) }} </td>
+                    <td> {{ formatNumber(cashRoi1) }} % </td>
                     <td></td>
                 </tr>
             </table>
         </div><!--close div "manager-hired"-->
-        
+
         <button (click)="calculate1()">Calculate</button> 
         
     </div><!--close div "property1"-->
