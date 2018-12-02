@@ -104,7 +104,7 @@
                 </tr>
                 <tr>
                     <td><input type="number" name="downPaymentPct1" [(ngModel)]="downPaymentPct1"></td>     
-                    <td>$ {{ formatNumber(purchasePrice1 - ((purchasePrice1 * downPaymentPct1) / 100)) }}  </td>
+                    <td>$ {{  }}   </td>
                     <td>$ {{ formatNumber((purchasePrice1 * downPaymentPct1) / 100) }} </td>
                     <td><input type="number" name="interestRate1" [(ngModel)]="interestRate1"></td>
                     <td><input type="number" name="mortgageTerm1" [(ngModel)]="mortgageTerm1"></td>
@@ -112,7 +112,7 @@
                     <td>$ {{ formatNumber(((purchasePrice1 * downPaymentPct1) / 100) + improvements1 + closingCosts1) }} </td>
                 </tr>
             </table>
-
+            
         </div><!--close div "financing-assumptions"-->
         
         <div id="expense-assumptions">
@@ -172,46 +172,6 @@
         </div><!--close div "manager-hired"-->
         
         <button (click)="calculate1()">Calculate</button> 
-        
-        
-        
-        <div id="mortgage-div1">
-            
-            <h4>Mortgage:</h4>
-            
-            <div>Down Payment:
-                <p></p>
-            </div>
-            
-            <div>Insurance (M):
-                <p></p>
-            </div>
-            
-            <div>Maintenance (M):
-                <p></p>
-            </div>
-            
-            <div>Utilities:
-                <p></p>
-            </div>
-            
-            <div>Advertising:
-                <p id="advertising1"></p>
-            </div>
-            
-            <div>Admin (Y):
-                <p id="admin-Y1"></p>
-            </div>
-            
-            <div>Property Management:
-                <p id="property-mgmt1"></p>
-            </div>
-            
-            <div>Variable Cost Property Management:
-                <p id="property-mgmt-pct1"></p>
-            </div>
-            
-        </div><!--close "mortgage-div"-->
         
     </div><!--close div "property1"-->
     
