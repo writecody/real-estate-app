@@ -11,7 +11,7 @@
     
     <h2>Zillow Property Search: Compare Properties</h2>
     
-    <form id="property-search">
+    <form class="property-search">
         <h4>Property 1 Search</h4>
         Address: <input type="text" name="formAddress1" [(ngModel)]="formAddress1">
         City, State: <input type="text" name="formCityStateZip1" [(ngModel)]="formCityStateZip1"> 
@@ -22,17 +22,17 @@
         
         <h3>Property 1</h3>
         
-        <div id="address-notes">
+        <div class="address-notes">
             <h4>Address:</h4>
             <p id="address1"></p>
             <p id="citystatezip1"></p>
             <p id="zipcode1"></p>
             
-            <h4 id="notes">Notes: </h4>
+            <h4 class="notes">Notes: </h4>
             <p><input type="textarea" name="notes1" [(ngModel)]="notes1"></p>
         </div><!--close div "address-notes"-->
         
-        <div id="cost-assumptions">
+        <div class="cost-assumptions">
             <h4>Cost Assumptions</h4>
             <table>
                 <tr>
@@ -54,7 +54,7 @@
             </table>
         </div><!--close div "cost-assumptions"-->
         
-        <div id="revenue-assumptions">
+        <div class="revenue-assumptions">
             <h4>Revenue Assumptions</h4>
             <table>
                 <tr>
@@ -68,7 +68,7 @@
             </table>
         </div><!--close div "revenue-assumptions"-->
         
-        <div id="quick-stats">
+        <div class="quick-stats">
             <h4>Quick Stats</h4>
             <table>
                 <tr>
@@ -90,7 +90,7 @@
             </table>
         </div><!--close div "quick-stats"-->
         
-        <div id="financing-assumptions">
+        <div class="financing-assumptions">
             <h4>Financing Assumptions</h4>
             <table>
                 <tr>
@@ -115,7 +115,7 @@
             
         </div><!--close div "financing-assumptions"-->
         
-        <div id="expense-assumptions">
+        <div class="expense-assumptions">
             <h4>Expense Assumptions</h4>
             <table>
                 <tr>
@@ -141,7 +141,7 @@
             </table>
         </div><!--close div "expense-assumptions"-->
         
-        <div id="manager-hired">
+        <div class="manager-hired">
             <h4>CF & ROI (Outsourced PM)</h4>
             <table>
                 <tr>
@@ -152,22 +152,114 @@
                 </tr>
                 <tr>
                     <td>$ {{ formatNumber(cashFlowY1) }} </td>
-                    <td> CASH ROI % </td>
+                    <td> {{ (cashRoiManager1 * 100).toFixed(2) }} % </td><!--multiply x100 to convert to whole number for visual only-->
                     <td>TOTAL ROI</td>
                     <td>$ {{ formatNumber(fixedCostPropertyMgmtY1) }} </td>
                 </tr>
             </table>
         </div><!--close div "manager-hired"-->
         
-        <div id="run-ourselves">
-        </div>
-
-        <p>test cashFlowY1 {{ (cashFlowY1) }} </p>
+        <div class="run-ourselves">
+            <h4>CF & ROI (Doing My Own PM)</h4>
+            <table>
+                <tr>
+                    <th>Annual Cash Flow</th>
+                    <th>Cash ROI</th>
+                    <th>Total ROI</th>
+                    <th>Fixed Cost Property Management (Year)</th>
+                </tr>
+                <tr>
+                    <td>$ ANNUAL CASH FLOW </td>
+                    <td> CASH ROI * 100 % </td><!--multiply x100 to convert to whole number for visual only-->
+                    <td>TOTAL ROI</td>
+                    <td>$ FCPM Y1 </td>
+                </tr>
+            </table>
+        </div><!--close div "run-ourselves"-->
+        
+        <p>test equityAccrued1 {{ equityAccrued1 }} </p>
         
         <button (click)="calculate1()">Calculate</button> 
         
     </div><!--close div "property1"-->
     
+    <div class="summary">
+        <h4>Summary</h4>
+        <table>
+            <tr>
+                <th>Property</th>
+                <th>Address</th>
+                <th>Listed Price</th>
+                <th>Hypothetical Price</th>
+                <th>Improvements</th>
+                <th>Cash Outlay</th>
+                <th>Rent</th>
+                <th>R/PP</th>
+                <th>R/HP</th>
+                <th>Beds</th>
+                <th>Baths</th>
+                <th>Sq Ft</th>
+                <th>Location Rt.</th>
+                <th>Cash ROI</th>
+                <th>Total ROI</th>
+                <th>Notes</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>P1</td>
+                <td>P1</td>
+                <td>P1</td>
+                <td>P1</td>
+                <td>P1</td>
+                <td>P1</td>
+                <td>P1</td>
+                <td>P1</td>
+                <td>P1</td>
+                <td>P1</td>
+                <td>P1</td>
+                <td>P1</td>
+                <td>P1</td>
+                <td>P1</td>
+                <td>P1</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>P2</td>
+                <td>P2</td>
+                <td>P2</td>
+                <td>P2</td>
+                <td>P2</td>
+                <td>P2</td>
+                <td>P2</td>
+                <td>P2</td>
+                <td>P2</td>
+                <td>P2</td>
+                <td>P2</td>
+                <td>P2</td>
+                <td>P2</td>
+                <td>P2</td>
+                <td>P2</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>P3</td>
+                <td>P3</td>
+                <td>P3</td>
+                <td>P3</td>
+                <td>P3</td>
+                <td>P3</td>
+                <td>P3</td>
+                <td>P3</td>
+                <td>P3</td>
+                <td>P3</td>
+                <td>P3</td>
+                <td>P3</td>
+                <td>P3</td>
+                <td>P3</td>
+                <td>P3</td>
+            </tr>
+        </table>
+    </div><!--close div "summary"-->
     
     
 </body>
