@@ -46,12 +46,12 @@
                     <th>Total Cost</th>
                 </tr>
                 <tr>
-                    <td>$<input type="number" name="purchasePrice1" [(ngModel)]="purchasePrice1"></td>
-                    <td>$ {{ formatNumber(landValue1) }} </td>
-                    <td>$ {{ formatNumber(buildingValue1) }} </td>
-                    <td>$<input type="number" name="improvements1" [(ngModel)]="improvements1"></td>
-                    <td>$<input type="number" name="closingCosts1" [(ngModel)]="closingCosts1"></td>
-                    <td>$ {{ formatNumber(totalCost1) }} </td>
+                    <td> $<input type="number" name="purchasePrice1" [(ngModel)]="purchasePrice1"></td>
+                    <td> ${{ formatNumber(landValue1) }} </td>
+                    <td> ${{ formatNumber(buildingValue1) }} </td>
+                    <td> $<input type="number" name="improvements1" [(ngModel)]="improvements1"></td>
+                    <td> $<input type="number" name="closingCosts1" [(ngModel)]="closingCosts1"></td>
+                    <td> ${{ formatNumber(totalCost1) }} </td>
                 </tr>
             </table>
         </div><!--close div "cost-assumptions"-->
@@ -64,8 +64,8 @@
                     <th>Vacancy Rate</th>
                 </tr>
                 <tr>
-                    <td>$<input type="number" name="rentM1" [(ngModel)]="rentM1"></td>
-                    <td>%<input type="number" name="vacancyLossRate1" [(ngModel)]="vacancyLossRate1"></td>
+                    <td> $<input type="number" name="rentM1" [(ngModel)]="rentM1"></td>
+                    <td> %<input type="number" name="vacancyLossRate1" [(ngModel)]="vacancyLossRate1"></td>
                 </tr>
             </table>
         </div><!--close div "revenue-assumptions"-->
@@ -106,12 +106,12 @@
                 </tr>
                 <tr>
                     <td><input type="number" name="downPaymentPct1" [(ngModel)]="downPaymentPct1"></td>     
-                    <td>$ {{ formatNumber(financeAmt1) }} </td>
-                    <td>$ {{ formatNumber(downPaymentAmt1) }} </td>
+                    <td> ${{ formatNumber(financeAmt1) }} </td>
+                    <td> ${{ formatNumber(downPaymentAmt1) }} </td>
                     <td><input type="number" name="interestRate1" [(ngModel)]="interestRate1"></td>
                     <td><input type="number" name="mortgageTerm1" [(ngModel)]="mortgageTerm1"></td>
-                    <td>$ {{ formatNumber(mortgageCostM1) }} </td>
-                    <td>$ {{ formatNumber(cashOutlay1) }} </td>
+                    <td> ${{ formatNumber(mortgageCostM1) }} </td>
+                    <td> ${{ formatNumber(cashOutlay1) }} </td>
                 </tr>
             </table>
         </div><!--close div "financing-assumptions"-->
@@ -131,13 +131,13 @@
                 </tr>
                 <tr>
                     <td><input type="number" name="taxRate1" [(ngModel)]="taxRate1"></td>
-                    <td>$<input type="number" name="insuranceM1" [(ngModel)]="insuranceM1"></td>
-                    <td>$<input type="number" name="maintenanceM1" [(ngModel)]="maintenanceM1"></td>
-                    <td>$<input type="number" name="utilitiesM1" [(ngModel)]="utilitiesM1"></td>
-                    <td>$<input type="number" name="advertisingY1" [(ngModel)]="advertisingY1"></td>
-                    <td>$<input type="number" name="adminY1" [(ngModel)]="adminY1"></td>     
+                    <td> $<input type="number" name="insuranceM1" [(ngModel)]="insuranceM1"></td>
+                    <td> $<input type="number" name="maintenanceM1" [(ngModel)]="maintenanceM1"></td>
+                    <td> $<input type="number" name="utilitiesM1" [(ngModel)]="utilitiesM1"></td>
+                    <td> $<input type="number" name="advertisingY1" [(ngModel)]="advertisingY1"></td>
+                    <td> $<input type="number" name="adminY1" [(ngModel)]="adminY1"></td>     
                     <td><input type="number" name="propertyMgmtPct1" [(ngModel)]="propertyMgmtPct1"></td>
-                    <td>$<input type="number" name="fixedCostPropertyMgmtM1" [(ngModel)]="fixedCostPropertyMgmtM1"></td> 
+                    <td> $<input type="number" name="fixedCostPropertyMgmtM1" [(ngModel)]="fixedCostPropertyMgmtM1"></td> 
                 </tr>
             </table>
         </div><!--close div "expense-assumptions"-->
@@ -152,10 +152,10 @@
                     <th>Fixed Cost Property Management (Year)</th>
                 </tr>
                 <tr>
-                    <td>$ {{ formatNumber(cashFlowY1) }} </td>
+                    <td> ${{ formatNumber(cashFlowY1) }} </td>
                     <td> {{ (cashRoiManager1 * 100).toFixed(2) }} % </td><!--multiply x100 to convert to whole number for visual only-->
                     <td>TOTAL ROI</td>
-                    <td>$ {{ formatNumber(fixedCostPropertyMgmtY1) }} </td>
+                    <td> ${{ formatNumber(fixedCostPropertyMgmtY1) }} </td>
                 </tr>
             </table>
         </div><!--close div "manager-hired"-->
@@ -170,15 +170,15 @@
                     <th>Fixed Cost Property Management (Year)</th>
                 </tr>
                 <tr>
-                    <td>$ ANNUAL CASH FLOW </td>
+                    <td> $ANNUAL CASH FLOW </td>
                     <td> CASH ROI * 100 % </td><!--multiply x100 to convert to whole number for visual only-->
                     <td>TOTAL ROI</td>
-                    <td>$ FCPM Y1 </td>
+                    <td> $FCPM Y1 </td>
                 </tr>
             </table>
         </div><!--close div "run-ourselves"-->
         
-        <p>test equityAccrued1 {{ equityAccrued1 }} </p>
+        <p>test rpp1 {{ rpp1 }} </p>
         
         <button (click)="calculate1()">Calculate</button> 
         
@@ -209,11 +209,11 @@
                 <td>1</td>
                 <td class="address1"></td>
                 <td class="amount1"></td>
-                <td> {{ purchasePrice1 }} </td>
-                <td>P1</td>
-                <td>P1</td>
-                <td>P1</td>
-                <td>P1</td>
+                <td> ${{ formatNumber(purchasePrice1) }} </td>
+                <td> ${{ formatNumber(improvements1) }} </td>
+                <td> ${{ formatNumber(cashOutlay1) }} </td>
+                <td> ${{ formatNumber(rentM1) }} </td>
+                <td> %{{ rpp1 }} </td>
                 <td>P1</td>
                 <td>P1</td>
                 <td>P1</td>
