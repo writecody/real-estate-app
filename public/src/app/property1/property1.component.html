@@ -83,12 +83,12 @@
                     <th>Location Rating</th>
                 </tr>
                 <tr>
-                    <td id="yearBuilt1"></td>
-                    <td class="amount1"></td>
-                    <td id="bedrooms1"></td>
-                    <td id="bathrooms1"></td>
-                    <td id="finishedSqFt1"></td>
-                    <td id="lotSizeSqFt1"></td>
+                    <td class="yearBuilt1"></td>
+                    <td class="listedPrice1"></td>
+                    <td class="bedrooms1"></td>
+                    <td class="bathrooms1"></td>
+                    <td class="finishedSqFt1"></td>
+                    <td class="lotSizeSqFt1"></td>
                     <td><input type="number" name="locationRating1" [(ngModel)]="locationRating1"></td>
                 </tr>
             </table>
@@ -180,7 +180,7 @@
             </table>
         </div><!--close div "run-ourselves"-->
         
-        <p>test amount1 {{ amount1 }} </p>
+        <p>Test </p>
         
         <button (click)="calculate1()">Calculate</button> 
         
@@ -209,19 +209,19 @@
             <tr>
                 <td>1</td>
                 <td class="address1"></td>
-                <td class="amount1"></td>
+                <td class="listedPrice1"></td>
                 <td> ${{ formatNumber(purchasePrice1) }} </td>
                 <td> ${{ formatNumber(improvements1) }} </td>
                 <td> ${{ formatNumber(cashOutlay1) }} </td>
                 <td> ${{ formatNumber(rentM1) }} </td>
-                <td> %{{ rhp1 }} </td>
+                <td> %{{ (rhp1).toFixed(2) }} </td>
+                <td class="bedrooms1"></td>
+                <td></td>
+                <td class="finishedSqFt1"></td>
+                <td> {{ locationRating1 }} </td>
                 <td>P1</td>
                 <td>P1</td>
-                <td>P1</td>
-                <td> {{ (locationRating1) }} </td>
-                <td>P1</td>
-                <td>P1</td>
-                <td>P1</td>
+                <td> {{ notes1 }} </td>
             </tr>
             <tr>
                 <td>2</td>
@@ -239,11 +239,9 @@
                 <td>P2</td>
                 <td>P2</td>
                 <td>P2</td>
-                <td>P2</td>
             </tr>
             <tr>
                 <td>3</td>
-                <td>P3</td>
                 <td>P3</td>
                 <td>P3</td>
                 <td>P3</td>
