@@ -80,6 +80,7 @@
                     <th>Baths</th>
                     <th>Square Footage</th>
                     <th>Lot Size (Sq. Ft.)</th>
+                    <th>Location Rating</th>
                 </tr>
                 <tr>
                     <td id="yearBuilt1"></td>
@@ -88,6 +89,7 @@
                     <td id="bathrooms1"></td>
                     <td id="finishedSqFt1"></td>
                     <td id="lotSizeSqFt1"></td>
+                    <td><input type="number" name="locationRating1" [(ngModel)]="locationRating1"></td>
                 </tr>
             </table>
         </div><!--close div "quick-stats"-->
@@ -178,7 +180,7 @@
             </table>
         </div><!--close div "run-ourselves"-->
         
-        <p>test rentM1 {{ rentM1 }} </p>
+        <p>test amount1 {{ amount1 }} </p>
         
         <button (click)="calculate1()">Calculate</button> 
         
@@ -195,12 +197,11 @@
                 <th>Improvements</th>
                 <th>Cash Outlay</th>
                 <th>Rent</th>
-                <th>R/PP</th>
                 <th>R/HP</th>
                 <th>Beds</th>
                 <th>Baths</th>
                 <th>Sq Ft</th>
-                <th>Location Rt.</th>
+                <th>Location Rating</th>
                 <th>Cash ROI</th>
                 <th>Total ROI</th>
                 <th>Notes</th>
@@ -213,12 +214,11 @@
                 <td> ${{ formatNumber(improvements1) }} </td>
                 <td> ${{ formatNumber(cashOutlay1) }} </td>
                 <td> ${{ formatNumber(rentM1) }} </td>
-                <td> %{{ rpp1 }} </td>
+                <td> %{{ rhp1 }} </td>
                 <td>P1</td>
                 <td>P1</td>
                 <td>P1</td>
-                <td>P1</td>
-                <td>P1</td>
+                <td> {{ (locationRating1) }} </td>
                 <td>P1</td>
                 <td>P1</td>
                 <td>P1</td>
