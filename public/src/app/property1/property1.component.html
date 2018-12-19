@@ -172,14 +172,14 @@
                 </tr>
                 <tr>
                     <td> $ {{ formatNumber(cashFlowOwnY1) }} </td>
-                    <td> CASH ROI * 100 % </td><!--multiply x100 to convert to whole number for visual only-->
+                    <td> {{ (cashRoiOwn1 * 100).toFixed(2) }} % </td><!--multiply x100 to convert to whole number for visual only-->
                     <td>TOTAL ROI</td>
                     <td> $FCPM Y1 </td>
                 </tr>
             </table>
         </div><!--close div "run-ourselves"-->
         
-        <p>Test cashFlowOwnY1 {{ cashFlowOwnY1 }} </p>
+        <p>Test cashRoiOwn1 {{ cashRoiOwn1 }} </p>
         
         <button (click)="calculate1()">Calculate</button> 
         
