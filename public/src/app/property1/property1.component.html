@@ -491,7 +491,41 @@
             </table>
         </div><!--close div "expense-assumptions"-->
 
+        <div class="manager-hired">
+            <h4>CF & ROI (Outsourced PM)</h4>
+            <table>
+                <tr>
+                    <th>Annual Cash Flow</th>
+                    <th>Cash ROI</th>
+                    <th>Total ROI</th>
+                    <th>Fixed Cost Property Management (Year)</th>
+                </tr>
+                <tr>
+                    <td> $ {{ formatNumber(cashFlowManagerY3) }} </td>
+                    <td> {{ (cashRoiManager3 * 100).toFixed(2) }} % </td><!--multiply x100 to convert for visual only-->
+                    <td> {{ (totalRoiManager3 * 100).toFixed(2) }} % </td><!--multiply x100 to convert for visual only-->
+                    <td> $ {{ formatNumber(fixedCostPropertyMgmtY3) }} </td>
+                </tr>
+            </table>
+        </div><!--close div "manager-hired"-->
         
+        <div class="run-ourselves">
+            <h4>CF & ROI (Doing My Own PM)</h4>
+            <table>
+                <tr>
+                    <th>Annual Cash Flow</th>
+                    <th>Cash ROI</th>
+                    <th>Total ROI</th>
+                </tr>
+                <tr>
+                    <td> $ {{ formatNumber(cashFlowOwnY3) }} </td>
+                    <td> {{ (cashRoiOwn3 * 100).toFixed(2) }} % </td><!--multiply x100 to convert to whole number for visual only-->
+                    <td> {{ (totalRoiOwn3 * 100).toFixed(2) }} % </td>
+                </tr>
+            </table>
+        </div><!--close div "run-ourselves"-->
+        
+        <button (click)="calculate3()">Calculate</button> 
 
     </div><!--close div "property3"-->
 
