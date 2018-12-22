@@ -11,13 +11,24 @@
     <h2>Compare Properties</h2>
     
     <h3>Search Zillow</h3>
-
+    
     <form class="property-search">
         <h4>Property 1 Search</h4>
         Address: <input type="text" name="formAddress1" [(ngModel)]="formAddress1">
         City, State: <input type="text" name="formCityStateZip1" [(ngModel)]="formCityStateZip1"> 
         <button (click)="search1()">Search</button>
     </form>
+    
+    <hr>
+    
+    <form class="property-search">
+        <h4>Property 2 Search</h4>
+        Address: <input type="text" name="formAddress2" [(ngModel)]="formAddress2">
+        City, State: <input type="text" name="formCityStateZip2" [(ngModel)]="formCityStateZip2"> 
+        <button (click)="search2()">Search</button>
+    </form>
+    
+    <hr>
     
     <div id="property1">
         
@@ -183,6 +194,87 @@
         
     </div><!--close div "property1"-->
     
+    <hr>
+    
+    <div id="property2">
+        
+        <h3>Property 2</h3>
+        
+        <div class="address-notes">
+            <h4>Address:</h4>
+            <p class="address2"></p>
+            <p id="citystatezip2"></p>
+            <p id="zipcode2"></p>
+            
+            <h4 class="notes">Notes: </h4>
+            <p><input type="textarea" name="notes2" [(ngModel)]="notes2"></p>
+        </div><!--close div "address-notes"-->
+        
+        <div class="cost-assumptions">
+            <h4>Cost Assumptions</h4>
+            <table>
+                <tr>
+                    <th>Purchase Price</th>
+                    <th>Land Value (25%)</th>
+                    <th>Building Value</th>
+                    <th>Improvements</th>
+                    <th>Closing Costs</th>
+                    <th>Total Cost</th>
+                </tr>
+                <tr>
+                    <td> $ <input type="number" name="purchasePrice2" [(ngModel)]="purchasePrice2"></td>
+                    <td> $ {{ formatNumber(landValue2) }} </td>
+                    <td> $ {{ formatNumber(buildingValue2) }} </td>
+                    <td> $ <input type="number" name="improvements2" [(ngModel)]="improvements2"></td>
+                    <td> $ <input type="number" name="closingCosts2" [(ngModel)]="closingCosts2"></td>
+                    <td> $ {{ formatNumber(totalCost2) }} </td>
+                </tr>
+            </table>
+        </div><!--close div "cost-assumptions"-->
+        
+        <div class="revenue-assumptions">
+            <h4>Revenue Assumptions</h4>
+            <table>
+                <tr>
+                    <th>Monthly Rent</th>
+                    <th>Vacancy Rate</th>
+                </tr>
+                <tr>
+                    <td> $ <input type="number" name="rentM2" [(ngModel)]="rentM2"></td>
+                    <td> % <input type="number" name="vacancyLossRate2" [(ngModel)]="vacancyLossRate2"></td>
+                </tr>
+            </table>
+        </div><!--close div "revenue-assumptions"-->
+        
+        <div class="quick-stats">
+            <h4>Quick Stats</h4>
+            <table>
+                <tr>
+                    <th>Year Built</th>
+                    <th>Listed Price</th>
+                    <th>Beds</th>
+                    <th>Baths</th>
+                    <th>Square Footage</th>
+                    <th>Lot Size (Sq. Ft.)</th>
+                    <th>Location Rating</th>
+                </tr>
+                <tr>
+                    <td class="yearBuilt2"></td>
+                    <td class="listedPrice2"></td>
+                    <td class="bedrooms2"></td>
+                    <td class="bathrooms2"></td>
+                    <td class="finishedSqFt2"></td>
+                    <td id="lotSizeSqFt2"></td>
+                    <td><input type="number" name="locationRating2" [(ngModel)]="locationRating2"></td>
+                </tr>
+            </table>
+        </div><!--close div "quick-stats"-->
+
+
+    </div><!--close div "property2"-->
+    
+    <hr>
+    
     <div class="summary">
         <h4>Summary</h4>
         <table>
@@ -222,20 +314,21 @@
             </tr>
             <tr>
                 <td>2</td>
+                <td class="address2"></td>
+                <td class="listedPrice2"></td>
                 <td>P2</td>
                 <td>P2</td>
                 <td>P2</td>
                 <td>P2</td>
                 <td>P2</td>
+                <td class="bedrooms2"></td>
+                <td class="bathrooms2"></td>
+                <td class="finishedSqFt2"></td>
                 <td>P2</td>
                 <td>P2</td>
                 <td>P2</td>
                 <td>P2</td>
-                <td>P2</td>
-                <td>P2</td>
-                <td>P2</td>
-                <td>P2</td>
-                <td>P2</td>
+                <td> {{ notes2 }} </td>
             </tr>
             <tr>
                 <td>3</td>
