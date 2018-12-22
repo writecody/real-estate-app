@@ -168,18 +168,16 @@
                     <th>Annual Cash Flow</th>
                     <th>Cash ROI</th>
                     <th>Total ROI</th>
-                    <th>Fixed Cost Property Management (Year)</th>
                 </tr>
                 <tr>
                     <td> $ {{ formatNumber(cashFlowOwnY1) }} </td>
                     <td> {{ (cashRoiOwn1 * 100).toFixed(2) }} % </td><!--multiply x100 to convert to whole number for visual only-->
                     <td> {{ (totalRoiOwn1 * 100).toFixed(2) }} % </td>
-                    <td> $FCPM Y1 </td>
                 </tr>
             </table>
         </div><!--close div "run-ourselves"-->
         
-        <p>Test totalRoiOwn1 {{ totalRoiOwn1 }} </p>
+        <p>Test amountFormatted1 {{ amountFormatted1 }} </p>
         
         <button (click)="calculate1()">Calculate</button> 
         
@@ -218,8 +216,8 @@
                 <td class="bathrooms1"></td>
                 <td class="finishedSqFt1"></td>
                 <td> {{ locationRating1 }} </td>
-                <td>RUN OURSELVES CASH ROI 1</td>
-                <td>RUN OURSELVES TOTAL ROI 1</td>
+                <td> {{ (cashRoiOwn1 * 100).toFixed(2) }} % </td>
+                <td> {{ (totalRoiOwn1 * 100).toFixed(2) }} % </td>
                 <td> {{ notes1 }} </td>
             </tr>
             <tr>
