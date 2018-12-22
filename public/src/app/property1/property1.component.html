@@ -381,6 +381,68 @@
             <p><input type="textarea" name="notes3" [(ngModel)]="notes3"></p>
         </div><!--close div "address-notes"-->
     
+        <div class="cost-assumptions">
+            <h4>Cost Assumptions</h4>
+            <table>
+                <tr>
+                    <th>Purchase Price</th>
+                    <th>Land Value (25%)</th>
+                    <th>Building Value</th>
+                    <th>Improvements</th>
+                    <th>Closing Costs</th>
+                    <th>Total Cost</th>
+                </tr>
+                <tr>
+                    <td> $ <input type="number" name="purchasePrice3" [(ngModel)]="purchasePrice3"></td>
+                    <td> $ {{ formatNumber(landValue3) }} </td>
+                    <td> $ {{ formatNumber(buildingValue3) }} </td>
+                    <td> $ <input type="number" name="improvements3" [(ngModel)]="improvements3"></td>
+                    <td> $ <input type="number" name="closingCosts3" [(ngModel)]="closingCosts3"></td>
+                    <td> $ {{ formatNumber(totalCost3) }} </td>
+                </tr>
+            </table>
+        </div><!--close div "cost-assumptions"-->
+        
+        <div class="revenue-assumptions">
+            <h4>Revenue Assumptions</h4>
+            <table>
+                <tr>
+                    <th>Monthly Rent</th>
+                    <th>Vacancy Rate</th>
+                </tr>
+                <tr>
+                    <td> $ <input type="number" name="rentM3" [(ngModel)]="rentM3"></td>
+                    <td> % <input type="number" name="vacancyLossRate3" [(ngModel)]="vacancyLossRate3"></td>
+                </tr>
+            </table>
+        </div><!--close div "revenue-assumptions"-->
+
+        <div class="quick-stats">
+            <h4>Quick Stats</h4>
+            <table>
+                <tr>
+                    <th>Year Built</th>
+                    <th>Listed Price</th>
+                    <th>Beds</th>
+                    <th>Baths</th>
+                    <th>Square Footage</th>
+                    <th>Lot Size (Sq. Ft.)</th>
+                    <th>Location Rating</th>
+                </tr>
+                <tr>
+                    <td class="yearBuilt3"></td>
+                    <td class="listedPrice3"></td>
+                    <td class="bedrooms3"></td>
+                    <td class="bathrooms3"></td>
+                    <td class="finishedSqFt3"></td>
+                    <td id="lotSizeSqFt3"></td>
+                    <td><input type="number" name="locationRating3" [(ngModel)]="locationRating3"></td>
+                </tr>
+            </table>
+        </div><!--close div "quick-stats"-->
+
+        
+
     </div><!--close div "property3"-->
 
     <hr>
