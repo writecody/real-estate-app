@@ -29,6 +29,15 @@
     </form>
     
     <hr>
+
+    <form class="property-search">
+        <h4>Property 3 Search</h4>
+        Address: <input type="text" name="formAddress3" [(ngModel)]="formAddress3">
+        City, State: <input type="text" name="formCityStateZip3" [(ngModel)]="formCityStateZip3"> 
+        <button (click)="search3()">Search</button>
+    </form>
+    
+    <hr>
     
     <div id="property1">
         
@@ -355,7 +364,25 @@
         <button (click)="calculate2()">Calculate</button> 
 
     </div><!--close div "property2"-->
+
+    <hr>
     
+    <div id="property3">
+        
+        <h3>Property 3</h3>
+        
+        <div class="address-notes">
+            <h4>Address:</h4>
+            <p class="address3"></p>
+            <p id="citystatezip3"></p>
+            <p id="zipcode3"></p>
+            
+            <h4 class="notes">Notes: </h4>
+            <p><input type="textarea" name="notes3" [(ngModel)]="notes3"></p>
+        </div><!--close div "address-notes"-->
+    
+    </div><!--close div "property3"-->
+
     <hr>
     
     <div class="summary">
