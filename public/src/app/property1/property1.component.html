@@ -270,6 +270,55 @@
             </table>
         </div><!--close div "quick-stats"-->
 
+        <div class="financing-assumptions">
+            <h4>Financing Assumptions</h4>
+            <table>
+                <tr>
+                    <th>Down Payment (%)</th>
+                    <th>Finance Amt</th>
+                    <th>Down Payment Amt</th>
+                    <th>Interest Rate (%)</th>
+                    <th>Mortgage (Years)</th>
+                    <th>Mortgage Payment</th>
+                    <th>Cash Outlay</th>
+                </tr>
+                <tr>
+                    <td><input type="number" name="downPaymentPct2" [(ngModel)]="downPaymentPct2"></td>     
+                    <td> $ {{ formatNumber(financeAmt2) }} </td>
+                    <td> $ {{ formatNumber(downPaymentAmt2) }} </td>
+                    <td><input type="number" name="interestRate2" [(ngModel)]="interestRate2"></td>
+                    <td><input type="number" name="mortgageTerm2" [(ngModel)]="mortgageTerm2"></td>
+                    <td> $ {{ formatNumber(mortgageCostM2) }} </td>
+                    <td> $ {{ formatNumber(cashOutlay2) }} </td>
+                </tr>
+            </table>
+        </div><!--close div "financing-assumptions"-->
+
+        <div class="expense-assumptions">
+            <h4>Expense Assumptions</h4>
+            <table>
+                <tr>
+                    <th>Tax Rate (%)</th>
+                    <th>Insurance (Month)</th>
+                    <th>Maintenance & Repairs (Month)</th>
+                    <th>Utilities (Month)</th>
+                    <th>Advertising (Year)</th>
+                    <th>Admin (Year)</th>
+                    <th>Property Management (%)</th>
+                    <th>Property Management (Month) $</th>
+                </tr>
+                <tr>
+                    <td><input type="number" name="taxRate2" [(ngModel)]="taxRate2"></td>
+                    <td> $ <input type="number" name="insuranceM2" [(ngModel)]="insuranceM2"></td>
+                    <td> $ <input type="number" name="maintenanceM2" [(ngModel)]="maintenanceM2"></td>
+                    <td> $ <input type="number" name="utilitiesM2" [(ngModel)]="utilitiesM2"></td>
+                    <td> $ <input type="number" name="advertisingY2" [(ngModel)]="advertisingY2"></td>
+                    <td> $ <input type="number" name="adminY2" [(ngModel)]="adminY2"></td>     
+                    <td><input type="number" name="propertyMgmtPct2" [(ngModel)]="propertyMgmtPct2"></td>
+                    <td> $ <input type="number" name="fixedCostPropertyMgmtM2" [(ngModel)]="fixedCostPropertyMgmtM2"></td> 
+                </tr>
+            </table>
+        </div><!--close div "expense-assumptions"-->
 
     </div><!--close div "property2"-->
     
