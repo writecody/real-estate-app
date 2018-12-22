@@ -320,6 +320,40 @@
             </table>
         </div><!--close div "expense-assumptions"-->
 
+        <div class="manager-hired">
+            <h4>CF & ROI (Outsourced PM)</h4>
+            <table>
+                <tr>
+                    <th>Annual Cash Flow</th>
+                    <th>Cash ROI</th>
+                    <th>Total ROI</th>
+                    <th>Fixed Cost Property Management (Year)</th>
+                </tr>
+                <tr>
+                    <td> $ {{ formatNumber(cashFlowManagerY2) }} </td>
+                    <td> {{ (cashRoiManager2 * 100).toFixed(2) }} % </td><!--multiply x100 to convert for visual only-->
+                    <td> {{ (totalRoiManager2 * 100).toFixed(2) }} % </td><!--multiply x100 to convert for visual only-->
+                    <td> $ {{ formatNumber(fixedCostPropertyMgmtY2) }} </td>
+                </tr>
+            </table>
+        </div><!--close div "manager-hired"-->
+
+        <div class="run-ourselves">
+            <h4>CF & ROI (Doing My Own PM)</h4>
+            <table>
+                <tr>
+                    <th>Annual Cash Flow</th>
+                    <th>Cash ROI</th>
+                    <th>Total ROI</th>
+                </tr>
+                <tr>
+                    <td> $ {{ formatNumber(cashFlowOwnY2) }} </td>
+                    <td> {{ (cashRoiOwn2 * 100).toFixed(2) }} % </td><!--multiply x100 to convert to whole number for visual only-->
+                    <td> {{ (totalRoiOwn2 * 100).toFixed(2) }} % </td>
+                </tr>
+            </table>
+        </div><!--close div "run-ourselves"-->
+
     </div><!--close div "property2"-->
     
     <hr>
