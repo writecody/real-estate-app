@@ -188,8 +188,6 @@
             </table>
         </div><!--close div "run-ourselves"-->
         
-        <p>Test amountFormatted1 {{ amountFormatted1 }} </p>
-        
         <button (click)="calculate1()">Calculate</button> 
         
     </div><!--close div "property1"-->
@@ -354,6 +352,8 @@
             </table>
         </div><!--close div "run-ourselves"-->
 
+        <button (click)="calculate2()">Calculate</button> 
+
     </div><!--close div "property2"-->
     
     <hr>
@@ -399,18 +399,17 @@
                 <td>2</td>
                 <td class="address2"></td>
                 <td class="listedPrice2"></td>
-                <td>P2</td>
-                <td>P2</td>
-                <td>P2</td>
-                <td>P2</td>
-                <td>P2</td>
+                <td> $ {{ formatNumber(purchasePrice2) }} </td>
+                <td> $ {{ formatNumber(improvements2) }} </td>
+                <td> $ {{ formatNumber(cashOutlay2) }} </td>
+                <td> $ {{ formatNumber(rentM2) }} </td>
+                <td> {{ (rhp2).toFixed(2) }} % </td>
                 <td class="bedrooms2"></td>
                 <td class="bathrooms2"></td>
                 <td class="finishedSqFt2"></td>
-                <td>P2</td>
-                <td>P2</td>
-                <td>P2</td>
-                <td>P2</td>
+                <td> {{ locationRating2 }} </td>
+                <td> {{ (cashRoiOwn2 * 100).toFixed(2) }} % </td>
+                <td> {{ (totalRoiOwn2 * 100).toFixed(2) }} % </td>
                 <td> {{ notes2 }} </td>
             </tr>
             <tr>
