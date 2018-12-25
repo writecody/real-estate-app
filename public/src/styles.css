@@ -84,21 +84,21 @@ input {
 
 
 @media only screen and (min-width: 600px) {
-    div.cost-assumptions {
+    /* div.cost-assumptions {
         margin-left: 24px;
-    }
+    } */
 }
 
 @media only screen and (max-width: 600px) {
-    div.cost-assumptions {
+    /* div.cost-assumptions {
         margin-top: 24px;
-    }
+    } */
 }
 
 @media only screen and (min-width: 600px) {
-    .term {
+    /* .term {
         margin-left: 20px;
-    }
+    } */
 }
 
 div.quick-stats img {
@@ -297,4 +297,8 @@ span.purple-text {
 
 .row {
     padding: 10px;
+}
+
+:placeholder-shown {
+    font-size: .85em;
 }
