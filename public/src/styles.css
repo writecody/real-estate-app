@@ -141,6 +141,7 @@ button {
     line-height: 1;
     padding: 12px 30px 10px 30px;
     background-color: #eb1d5d;
+    height: .8;
 }
 
 img.logo {
@@ -161,7 +162,7 @@ img.logo {
     border: 1px dashed #a077bd;
 }
 
-div#property1 {
+div#all-properties-details {
     margin-top: 20px;
     background: #fff;
     border: 1px dashed #a077bd;
