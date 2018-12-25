@@ -68,7 +68,7 @@ input {
     font-size: 12px;
     outline: none!important;
     max-width: 160px;
-    border: 1px dashed #a077bd;
+    border: 1px dashed #f742aa;
     
 }
 .property-section {
@@ -236,58 +236,61 @@ div#summary-d_length, div#summary-d_filter, div#summary-d_info, div#summary-d_pa
 .listing-single-item a {
     color: #fefefe; }
     
-    .item-inner {
-        border: 1px solid #cecece;
-        background-color: #fff;
-    }
-    
-    .slide-item-features {
-        float: left;
-        padding-left: 0;
-        margin: 15px 0;
-    }
-    
-    .listing-single-item .item-inner .desc-box .item-features li {
-        border: none;
-        margin-right: 15px;
-        padding: 3px 0px;
-        font-size: 16px;
-    }
-    
-    .slide-item-features li {
-        float: left;
-        background-color: #fff;
-        border: 1px solid #B1B1B1;
-        font-size: 16px;
-        font-weight: 300;
-        color: #000;
-        margin-right: 5px;
-        padding: 3px 5px;
-        padding-right: 10px;
-        text-transform: capitalize;
-        -webkit-border-radius: 4px;
-        -moz-border-radius: 4px;
-        -ms-border-radius: 4px;
-        -o-border-radius: 4px;
-        border-radius: 4px;
-    }
-    
-    .form-group {
-        position: relative;
-    }
-    
-    .address1 {padding-bottom:20px;}
-    
-    ul li {list-style: none;}
+.item-inner {
+    border: 1px solid #cecece;
+    background-color: #fff;
+}
 
-    tr th {
-        padding: 10px;
-        text-align: center;
-    }
+.slide-item-features {
+    float: left;
+    padding-left: 0;
+    margin: 15px 0;
+}
 
-    td {
-        border: 1px dashed #a077bd;
-        padding: 10px;
-        text-align: center;
-    }
+.listing-single-item .item-inner .desc-box .item-features li {
+    border: none;
+    margin-right: 15px;
+    padding: 3px 0px;
+    font-size: 16px;
+}
 
+.slide-item-features li {
+    float: left;
+    background-color: #fff;
+    border: 1px solid #B1B1B1;
+    font-size: 16px;
+    font-weight: 300;
+    color: #000;
+    margin-right: 5px;
+    padding: 3px 5px;
+    padding-right: 10px;
+    text-transform: capitalize;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.form-group {
+    position: relative;
+}
+
+/* .address1 {padding-bottom:20px;} */
+
+ul li {list-style: none;}
+
+tr th {
+    padding: 10px;
+    text-align: center;
+}
+
+td {
+    border: 1px dashed #a077bd;
+    padding: 10px;
+    text-align: center;
+}
+
+span.purple-text {
+    color: #635bd6;
+}
