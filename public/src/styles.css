@@ -4,26 +4,3 @@ th, td {
     text-align: center;
     padding: 8px;
 }
-
-button {
-    background-color: springgreen;
-}
-
-#property1 {
-    background-color: lightgrey;
-    display: inline-block;
-}
-
-#property2 {
-    background-color: lightseagreen;
-    display: inline-block;
-}
- 
-#property3 {
-    background-color: #FFBC43;
-    display: inline-block;
-}
-
-.summary {
-    background-color: #90FF06;
-}
