@@ -81,40 +81,20 @@
 
             <div class="cost-assumptions">
                 <h4>Cost Assumptions</h4>
-                <table>
-                    <tr>
-                        <th>Purchase Price</th>
-                        <th>Improvements</th>
-                        <th>Closing Costs</th>
-                    </tr>
-                    <tr>
-                        <td> $ <input type="number" name="purchasePrice1" [(ngModel)]="purchasePrice1" placeholder="Purchase Price"></td>
-                        <td> $ <input type="number" name="improvements1" [(ngModel)]="improvements1" placeholder="Improvements"></td>
-                        <td> $ <input type="number" name="closingCosts1" [(ngModel)]="closingCosts1"></td>
-                    </tr>
-                </table>
-
-                <p>Land Value (25%): $ {{ formatNumber(landValue1) }} </p>
-                <p>Building Value (75%): $ {{ formatNumber(buildingValue1) }} </p>
-                <p>Total Cost: $ {{ formatNumber(totalCost1) }} </p>
-                <!-- <table>
-                    <tr>
-                        <th>Purchase Price</th>
-                        <th>Land Value (25%)</th>
-                        <th>Building Value</th>
-                        <th>Improvements</th>
-                        <th>Closing Costs</th>
-                        <th>Total Cost</th>
-                    </tr>
-                    <tr>
-                        <td> $ <input type="number" name="purchasePrice1" [(ngModel)]="purchasePrice1" placeholder="Purchase Price"></td>
-                        <td> $ {{ formatNumber(landValue1) }} </td>
-                        <td> $ {{ formatNumber(buildingValue1) }} </td>
-                        <td> $ <input type="number" name="improvements1" [(ngModel)]="improvements1" placeholder="Improvements"></td>
-                        <td> $ <input type="number" name="closingCosts1" [(ngModel)]="closingCosts1"></td>
-                        <td> $ {{ formatNumber(totalCost1) }} </td>
-                    </tr>
-                </table> -->
+                <div class="row">
+                    <table>
+                        <tr>
+                            <td> $ <input type="number" name="purchasePrice1" [(ngModel)]="purchasePrice1" placeholder="Purchase Price"></td>
+                            <td> $ <input type="number" name="improvements1" [(ngModel)]="improvements1" placeholder="Improvements"></td>
+                            <td> $ <input type="number" name="closingCosts1" [(ngModel)]="closingCosts1" placeholder="Closing Costs"></td>
+                        </tr>
+                    </table>
+                </div>        
+                <div class="row">                
+                    <p>Land Value (25%): $ {{ formatNumber(landValue1) }} </p>
+                    <p>Building Value (75%): $ {{ formatNumber(buildingValue1) }} </p>
+                    <p>Total Cost: $ {{ formatNumber(totalCost1) }} </p>
+                </div>
             </div><!--close div "cost-assumptions"-->
                             
                             <div class="revenue-assumptions">

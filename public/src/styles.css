@@ -294,3 +294,7 @@ td {
 span.purple-text {
     color: #635bd6;
 }
+
+.row {
+    padding: 10px;
+}
