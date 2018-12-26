@@ -50,32 +50,30 @@
         <hr>
         
         <div id="all-properties-details">
-            <!-- PROPERTY 1 INFO -->
+
             <h3><span class="purple-text">Property 1</span></h3>
             
             <h5 class="address1"></h5>
             <h5 id="citystatezip1"></h5>
             <h5 id="zipcode1"></h5>
             
+            <ul>
+                <li class="mlp"><i class="fas fa-hammer"></i><span class="yearBuilt1"></span></li>
+                <li class="mlp"><i class="fas fa-bed"></i><span class="bedrooms1"></span></li>
+                <li class="mlp"><i class="fas fa-shower"></i><span class="bathrooms1"></span></li>
+                <li class="mlp"><i class="fa fa-arrows-alt"></i><span class="finishedSqFt1"></span></li>
+                <li id="mlp"><i class="fas fa-expand"></i><span class="lotSizeSqFt1"></span></li>
+            </ul>
+
             <div class="quick-stats">
                 <div class="col-sm">
                     <table class="table table-responsive">
                         <tr>
-                            <th scope="col">Year Built</th>
                             <th scope="col">Listed Price</th>
-                            <th scope="col">Beds</th>
-                            <th scope="col">Baths</th>
-                            <th scope="col">Square Footage</th>
-                            <th scope="col">Lot Size (Sq. Ft.)</th>
                             <th scope="col">Location Rating</th>
                         </tr>
                         <tr>
-                            <td class="yearBuilt1"></td>
                             <td class="listedPrice1"></td>
-                            <td class="bedrooms1"></td>
-                            <td class="bathrooms1"></td>
-                            <td class="finishedSqFt1"></td>
-                            <td id="lotSizeSqFt1"></td>
                             <td><input type="number" name="locationRating1" [(ngModel)]="locationRating1"></td> 
                         </tr> 
                     </table>
@@ -103,7 +101,6 @@
                     </table>
                 </div>        
             </div><!--close div "cost-assumptions"-->
-
                 
             <div class="revenue-assumptions">
                 <div class="col-sm">
