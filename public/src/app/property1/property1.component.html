@@ -60,13 +60,13 @@
                 <div class="col-sm">
                     <table class="table table-responsive">
                         <tr>
-                            <th>Year Built</th>
-                            <th>Listed Price</th>
-                            <th>Beds</th>
-                            <th>Baths</th>
-                            <th>Square Footage</th>
-                            <th>Lot Size (Sq. Ft.)</th>
-                            <th>Location Rating</th>
+                            <th scope="col">Year Built</th>
+                            <th scope="col">Listed Price</th>
+                            <th scope="col">Beds</th>
+                            <th scope="col">Baths</th>
+                            <th scope="col">Square Footage</th>
+                            <th scope="col">Lot Size (Sq. Ft.)</th>
+                            <th scope="col">Location Rating</th>
                         </tr>
                         <tr>
                             <td class="yearBuilt1"></td>
@@ -75,8 +75,8 @@
                             <td class="bathrooms1"></td>
                             <td class="finishedSqFt1"></td>
                             <td id="lotSizeSqFt1"></td>
-                            <td><input type="number" name="locationRating1" [(ngModel)]="locationRating1"></td>
-                        </tr>
+                            <td><input type="number" name="locationRating1" [(ngModel)]="locationRating1"></td> 
+                            </tr> 
                     </table>
                 </div>
             </div><!--close div "quick-stats"-->
@@ -85,6 +85,13 @@
                 <div class="col-sm">
                     <h4>Cost Assumptions</h4>
                     <table class="table table-responsive">
+                        <tr>
+                            <th scope="col">Purchase Price ($)</th>
+                            <th scope="col">Improvements ($)</th>
+                            <th scope="col">Interest Rate (%)</th>
+                            <th scope="col">Closing Costs ($)</th>
+                            <th scope="col">Down Payment (%)</th>
+                        </tr>
                         <tr>
                             <td>$ <input type="number" name="purchasePrice1" [(ngModel)]="purchasePrice1" placeholder="Purchase Price ($)"></td>
                             <td>$ <input type="number" name="improvements1" [(ngModel)]="improvements1" placeholder="Improvements ($)"></td>
@@ -99,6 +106,7 @@
                     <div class="col-sm">
                         <h4>Revenue Assumptions</h4>
                         <table class="table table-responsive">
+                            
                             <tr>
                                 <td> $ <input type="number" name="rentM1" [(ngModel)]="rentM1" placeholder="Monthly Rent"></td>
                                 <td> % <input type="number" name="vacancyLossRate1" [(ngModel)]="vacancyLossRate1" placeholder="Vacancy Rate"></td>
@@ -147,11 +155,11 @@
                     <h4>Financing Assumptions</h4>
                     <table class="table table-responsive">
                         <tr>
-                            <th>Finance Amt</th>
-                            <th>Down Payment Amt</th>
-                            <th>Mortgage (Years)</th>
-                            <th>Mortgage Payment</th>
-                            <th>Cash Outlay</th>
+                            <th scope="col">Finance Amt</th>
+                            <th scope="col">Down Payment Amt</th>
+                            <th scope="col">Mortgage (Years)</th>
+                            <th scope="col">Mortgage Payment</th>
+                            <th scope="col">Cash Outlay</th>
                         </tr>
                         <tr>
                             <td> $ {{ formatNumber(financeAmt1) }} </td>
@@ -169,10 +177,10 @@
                     <h4>CF & ROI (Outsourced PM)</h4>
                     <table class="table table-responsive">
                         <tr>
-                            <th>Annual Cash Flow</th>
-                            <th>Cash ROI</th>
-                            <th>Total ROI</th>
-                            <th>Fixed Cost Property Management (Year)</th>
+                            <th scope="col">Annual Cash Flow</th>
+                            <th scope="col">Cash ROI</th>
+                            <th scope="col">Total ROI</th>
+                            <th scope="col">Fixed Cost Property Management (Year)</th>
                         </tr>
                         <tr>
                             <td> $ {{ formatNumber(cashFlowManagerY1) }} </td>
@@ -189,13 +197,13 @@
                     <h4>CF & ROI (Doing My Own PM)</h4>
                     <table class="table table-responsive">
                         <tr>
-                            <th>Annual Cash Flow</th>
-                            <th>Cash ROI</th>
-                            <th>Total ROI</th>
+                            <th scope="col">Annual Cash Flow</th>
+                            <th scope="col">Cash ROI</th>
+                            <th scope="col">Total ROI</th>
                         </tr>
                         <tr>
                             <td> $ {{ formatNumber(cashFlowOwnY1) }} </td>
-                            <td> {{ (cashRoiOwn1 * 100).toFixed(2) }} % </td><!--multiply x100 to convert to whole number for visual only-->
+                            <td> {{ (cashRoiOwn1 * 100).toFixed(2) }} % <!--multiply x100 to convert to whole number for visual only-->
                             <td> {{ (totalRoiOwn1 * 100).toFixed(2) }} % </td>
                         </tr>
                     </table>
@@ -204,323 +212,13 @@
             
             <hr>
             
-            <h3>Property 2</h3>
-            
-            <div class="address-notes">
-                <h4>Address:</h4>
-                <p class="address2"></p>
-                <p id="citystatezip2"></p>
-                <p id="zipcode2"></p>
-                
-                <h4 class="notes">Notes: </h4>
-                <p><input type="textarea" name="notes2" [(ngModel)]="notes2"></p>
-            </div><!--close div "address-notes"-->
-            
-            <div class="cost-assumptions">
-                <h4>Cost Assumptions</h4>
-                <table>
-                    <tr>
-                        <th>Purchase Price</th>
-                        <th>Land Value (25%)</th>
-                        <th>Building Value</th>
-                        <th>Improvements</th>
-                        <th>Closing Costs</th>
-                        <th>Total Cost</th>
-                    </tr>
-                    <tr>
-                        <td> $ <input type="number" name="purchasePrice2" [(ngModel)]="purchasePrice2"></td>
-                        <td> $ {{ formatNumber(landValue2) }} </td>
-                        <td> $ {{ formatNumber(buildingValue2) }} </td>
-                        <td> $ <input type="number" name="improvements2" [(ngModel)]="improvements2"></td>
-                        <td> $ <input type="number" name="closingCosts2" [(ngModel)]="closingCosts2"></td>
-                        <td> $ {{ formatNumber(totalCost2) }} </td>
-                    </tr>
-                </table>
-            </div><!--close div "cost-assumptions"-->
-            
-            <div class="revenue-assumptions">
-                <h4>Revenue Assumptions</h4>
-                <table>
-                    <tr>
-                        <th>Monthly Rent</th>
-                        <th>Vacancy Rate</th>
-                    </tr>
-                    <tr>
-                        <td> $ <input type="number" name="rentM2" [(ngModel)]="rentM2"></td>
-                        <td> % <input type="number" name="vacancyLossRate2" [(ngModel)]="vacancyLossRate2"></td>
-                    </tr>
-                </table>
-            </div><!--close div "revenue-assumptions"-->
-            
-            <div class="quick-stats">
-                <h4>Quick Stats</h4>
-                <table>
-                    <tr>
-                        <th>Year Built</th>
-                        <th>Listed Price</th>
-                        <th>Beds</th>
-                        <th>Baths</th>
-                        <th>Square Footage</th>
-                        <th>Lot Size (Sq. Ft.)</th>
-                        <th>Location Rating</th>
-                    </tr>
-                    <tr>
-                        <td class="yearBuilt2"></td>
-                        <td class="listedPrice2"></td>
-                        <td class="bedrooms2"></td>
-                        <td class="bathrooms2"></td>
-                        <td class="finishedSqFt2"></td>
-                        <td id="lotSizeSqFt2"></td>
-                        <td><input type="number" name="locationRating2" [(ngModel)]="locationRating2"></td>
-                    </tr>
-                </table>
-            </div><!--close div "quick-stats"-->
-            
-            <div class="financing-assumptions">
-                <h4>Financing Assumptions</h4>
-                <table>
-                    <tr>
-                        <th>Down Payment (%)</th>
-                        <th>Finance Amt</th>
-                        <th>Down Payment Amt</th>
-                        <th>Interest Rate (%)</th>
-                        <th>Mortgage (Years)</th>
-                        <th>Mortgage Payment</th>
-                        <th>Cash Outlay</th>
-                    </tr>
-                    <tr>
-                        <td><input type="number" name="downPaymentPct2" [(ngModel)]="downPaymentPct2"></td>     
-                        <td> $ {{ formatNumber(financeAmt2) }} </td>
-                        <td> $ {{ formatNumber(downPaymentAmt2) }} </td>
-                        <td><input type="number" name="interestRate2" [(ngModel)]="interestRate2"></td>
-                        <td><input type="number" name="mortgageTerm2" [(ngModel)]="mortgageTerm2"></td>
-                        <td> $ {{ formatNumber(mortgageCostM2) }} </td>
-                        <td> $ {{ formatNumber(cashOutlay2) }} </td>
-                    </tr>
-                </table>
-            </div><!--close div "financing-assumptions"-->
-            
-            <div class="expense-assumptions">
-                <h4>Expense Assumptions</h4>
-                <table>
-                    <tr>
-                        <th>Tax Rate (%)</th>
-                        <th>Insurance (Month)</th>
-                        <th>Maintenance & Repairs (Month)</th>
-                        <th>Utilities (Month)</th>
-                        <th>Advertising (Year)</th>
-                        <th>Admin (Year)</th>
-                        <th>Property Management (%)</th>
-                        <th>Property Management (Month) $</th>
-                    </tr>
-                    <tr>
-                        <td><input type="number" name="taxRate2" [(ngModel)]="taxRate2"></td>
-                        <td> $ <input type="number" name="insuranceM2" [(ngModel)]="insuranceM2"></td>
-                        <td> $ <input type="number" name="maintenanceM2" [(ngModel)]="maintenanceM2"></td>
-                        <td> $ <input type="number" name="utilitiesM2" [(ngModel)]="utilitiesM2"></td>
-                        <td> $ <input type="number" name="advertisingY2" [(ngModel)]="advertisingY2"></td>
-                        <td> $ <input type="number" name="adminY2" [(ngModel)]="adminY2"></td>     
-                        <td><input type="number" name="propertyMgmtPct2" [(ngModel)]="propertyMgmtPct2"></td>
-                        <td> $ <input type="number" name="fixedCostPropertyMgmtM2" [(ngModel)]="fixedCostPropertyMgmtM2"></td> 
-                    </tr>
-                </table>
-            </div><!--close div "expense-assumptions"-->
-            
-            <div class="manager-hired">
-                <h4>CF & ROI (Outsourced PM)</h4>
-                <table>
-                    <tr>
-                        <th>Annual Cash Flow</th>
-                        <th>Cash ROI</th>
-                        <th>Total ROI</th>
-                        <th>Fixed Cost Property Management (Year)</th>
-                    </tr>
-                    <tr>
-                        <td> $ {{ formatNumber(cashFlowManagerY2) }} </td>
-                        <td> {{ (cashRoiManager2 * 100).toFixed(2) }} % </td><!--multiply x100 to convert for visual only-->
-                        <td> {{ (totalRoiManager2 * 100).toFixed(2) }} % </td><!--multiply x100 to convert for visual only-->
-                        <td> $ {{ formatNumber(fixedCostPropertyMgmtY2) }} </td>
-                    </tr>
-                </table>
-            </div><!--close div "manager-hired"-->
-            
-            <div class="run-ourselves">
-                <h4>CF & ROI (Doing My Own PM)</h4>
-                <table>
-                    <tr>
-                        <th>Annual Cash Flow</th>
-                        <th>Cash ROI</th>
-                        <th>Total ROI</th>
-                    </tr>
-                    <tr>
-                        <td> $ {{ formatNumber(cashFlowOwnY2) }} </td>
-                        <td> {{ (cashRoiOwn2 * 100).toFixed(2) }} % </td><!--multiply x100 to convert to whole number for visual only-->
-                        <td> {{ (totalRoiOwn2 * 100).toFixed(2) }} % </td>
-                    </tr>
-                </table>
-            </div><!--close div "run-ourselves"-->
-            
+            PROPERTY 2
             
             <hr>
             
+            PROPERTY 3
             
-            <h3>Property 3</h3>
-            
-            <div class="address-notes">
-                <h4>Address:</h4>
-                <p class="address3"></p>
-                <p id="citystatezip3"></p>
-                <p id="zipcode3"></p>
-                
-                <h4 class="notes">Notes: </h4>
-                <p><input type="textarea" name="notes3" [(ngModel)]="notes3"></p>
-            </div><!--close div "address-notes"-->
-            
-            <div class="cost-assumptions">
-                <h4>Cost Assumptions</h4>
-                <table>
-                    <tr>
-                        <th>Purchase Price</th>
-                        <th>Land Value (25%)</th>
-                        <th>Building Value</th>
-                        <th>Improvements</th>
-                        <th>Closing Costs</th>
-                        <th>Total Cost</th>
-                    </tr>
-                    <tr>
-                        <td> $ <input type="number" name="purchasePrice3" [(ngModel)]="purchasePrice3"></td>
-                        <td> $ {{ formatNumber(landValue3) }} </td>
-                        <td> $ {{ formatNumber(buildingValue3) }} </td>
-                        <td> $ <input type="number" name="improvements3" [(ngModel)]="improvements3"></td>
-                        <td> $ <input type="number" name="closingCosts3" [(ngModel)]="closingCosts3"></td>
-                        <td> $ {{ formatNumber(totalCost3) }} </td>
-                    </tr>
-                </table>
-            </div><!--close div "cost-assumptions"-->
-            
-            <div class="revenue-assumptions">
-                <h4>Revenue Assumptions</h4>
-                <table>
-                    <tr>
-                        <th>Monthly Rent</th>
-                        <th>Vacancy Rate</th>
-                    </tr>
-                    <tr>
-                        <td> $ <input type="number" name="rentM3" [(ngModel)]="rentM3"></td>
-                        <td> % <input type="number" name="vacancyLossRate3" [(ngModel)]="vacancyLossRate3"></td>
-                    </tr>
-                </table>
-            </div><!--close div "revenue-assumptions"-->
-            
-            <div class="quick-stats">
-                <h4>Quick Stats</h4>
-                <table>
-                    <tr>
-                        <th>Year Built</th>
-                        <th>Listed Price</th>
-                        <th>Beds</th>
-                        <th>Baths</th>
-                        <th>Square Footage</th>
-                        <th>Lot Size (Sq. Ft.)</th>
-                        <th>Location Rating</th>
-                    </tr>
-                    <tr>
-                        <td class="yearBuilt3"></td>
-                        <td class="listedPrice3"></td>
-                        <td class="bedrooms3"></td>
-                        <td class="bathrooms3"></td>
-                        <td class="finishedSqFt3"></td>
-                        <td id="lotSizeSqFt3"></td>
-                        <td><input type="number" name="locationRating3" [(ngModel)]="locationRating3"></td>
-                    </tr>
-                </table>
-            </div><!--close div "quick-stats"-->
-            
-            <div class="financing-assumptions">
-                <h4>Financing Assumptions</h4>
-                <table>
-                    <tr>
-                        <th>Down Payment (%)</th>
-                        <th>Finance Amt</th>
-                        <th>Down Payment Amt</th>
-                        <th>Interest Rate (%)</th>
-                        <th>Mortgage (Years)</th>
-                        <th>Mortgage Payment</th>
-                        <th>Cash Outlay</th>
-                    </tr>
-                    <tr>
-                        <td><input type="number" name="downPaymentPct3" [(ngModel)]="downPaymentPct3"></td>     
-                        <td> $ {{ formatNumber(financeAmt3) }} </td>
-                        <td> $ {{ formatNumber(downPaymentAmt3) }} </td>
-                        <td><input type="number" name="interestRate3" [(ngModel)]="interestRate3"></td>
-                        <td><input type="number" name="mortgageTerm3" [(ngModel)]="mortgageTerm3"></td>
-                        <td> $ {{ formatNumber(mortgageCostM3) }} </td>
-                        <td> $ {{ formatNumber(cashOutlay3) }} </td>
-                    </tr>
-                </table>
-            </div><!--close div "financing-assumptions"-->
-            
-            <div class="expense-assumptions">
-                <h4>Expense Assumptions</h4>
-                <table>
-                    <tr>
-                        <th>Tax Rate (%)</th>
-                        <th>Insurance (Month)</th>
-                        <th>Maintenance & Repairs (Month)</th>
-                        <th>Utilities (Month)</th>
-                        <th>Advertising (Year)</th>
-                        <th>Admin (Year)</th>
-                        <th>Property Management (%)</th>
-                        <th>Property Management (Month) $</th>
-                    </tr>
-                    <tr>
-                        <td><input type="number" name="taxRate3" [(ngModel)]="taxRate3"></td>
-                        <td> $ <input type="number" name="insuranceM3" [(ngModel)]="insuranceM3"></td>
-                        <td> $ <input type="number" name="maintenanceM3" [(ngModel)]="maintenanceM3"></td>
-                        <td> $ <input type="number" name="utilitiesM3" [(ngModel)]="utilitiesM3"></td>
-                        <td> $ <input type="number" name="advertisingY3" [(ngModel)]="advertisingY3"></td>
-                        <td> $ <input type="number" name="adminY3" [(ngModel)]="adminY3"></td>     
-                        <td><input type="number" name="propertyMgmtPct3" [(ngModel)]="propertyMgmtPct3"></td>
-                        <td> $ <input type="number" name="fixedCostPropertyMgmtM3" [(ngModel)]="fixedCostPropertyMgmtM3"></td> 
-                    </tr>
-                </table>
-            </div><!--close div "expense-assumptions"-->
-            
-            <div class="manager-hired">
-                <h4>CF & ROI (Outsourced PM)</h4>
-                <table>
-                    <tr>
-                        <th>Annual Cash Flow</th>
-                        <th>Cash ROI</th>
-                        <th>Total ROI</th>
-                        <th>Fixed Cost Property Management (Year)</th>
-                    </tr>
-                    <tr>
-                        <td> $ {{ formatNumber(cashFlowManagerY3) }} </td>
-                        <td> {{ (cashRoiManager3 * 100).toFixed(2) }} % </td><!--multiply x100 to convert for visual only-->
-                        <td> {{ (totalRoiManager3 * 100).toFixed(2) }} % </td><!--multiply x100 to convert for visual only-->
-                        <td> $ {{ formatNumber(fixedCostPropertyMgmtY3) }} </td>
-                    </tr>
-                </table>
-            </div><!--close div "manager-hired"-->
-            
-            <div class="run-ourselves">
-                <h4>CF & ROI (Doing My Own PM)</h4>
-                <table>
-                    <tr>
-                        <th>Annual Cash Flow</th>
-                        <th>Cash ROI</th>
-                        <th>Total ROI</th>
-                    </tr>
-                    <tr>
-                        <td> $ {{ formatNumber(cashFlowOwnY3) }} </td>
-                        <td> {{ (cashRoiOwn3 * 100).toFixed(2) }} % </td><!--multiply x100 to convert to whole number for visual only-->
-                        <td> {{ (totalRoiOwn3 * 100).toFixed(2) }} % </td>
-                    </tr>
-                </table>
-            </div><!--close div "run-ourselves"-->
-            
-        </div><!--close div "property1"-->
+        </div><!--close div "all-properties-details"-->
         
         <div class="row">
             <button (click)="compareAll()">Compare Properties</button> 
