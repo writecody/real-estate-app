@@ -72,7 +72,7 @@ input {
     
 }
 .property-section {
-    /* width:80%; */
+    width:80%;
     border: #635bd5 dashed 1px;
     padding: 20px;
 }
@@ -141,7 +141,6 @@ button {
     line-height: 1;
     padding: 12px 30px 10px 30px;
     background-color: #eb1d5d;
-    height: .8;
 }
 
 img.logo {
@@ -166,7 +165,7 @@ div#all-properties-details {
     margin-top: 20px;
     background: #fff;
     border: 1px dashed #a077bd;
-    /* width:80%; */
+    width:80%;
     padding: 1% 2%;
 }
 
@@ -189,9 +188,9 @@ h4.title {
     font-size:22px;
 }
 
-/* div#summary-d_length, div#summary-d_filter, div#summary-d_info, div#summary-d_paginate {
+div#summary-d_length, div#summary-d_filter, div#summary-d_info, div#summary-d_paginate {
     display: none;
-} */
+}
 
 .cost-assumptions input::before {content: "$";}
 
