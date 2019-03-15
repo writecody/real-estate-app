@@ -23,7 +23,6 @@ export class CompareComponent implements OnInit {
     ngOnInit() {
     }
     
-    
     calculateCompare() {
     }
 
